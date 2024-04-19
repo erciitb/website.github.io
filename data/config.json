@@ -1,0 +1,13 @@
+{
+  "title":"ERC IIT Bombay",
+  "description":"Electronics and Robotics Club, IIT Bombay's Website ",
+  "repositoryUrl":"https://github.com/jujhaar2409/ERC-website-2021",
+  "blog": {
+    "title":"ERC: Blog",
+    "description":"Electronics and Robotics Club, IIT Bombay's Blog"
+  },
+  "events": {
+    "title":"ERC: Events",
+    "description":"Electronics and Robotics Club, IIT Bombay's Events"
+  }
+}
