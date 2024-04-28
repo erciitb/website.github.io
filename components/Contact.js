@@ -4,7 +4,7 @@ function ContactUs() {
     <div className="contact-section" id="contact">
         <div className="contact-details">
           <p id="contact-text" className="hover-difference">
-            Get directly in touch with us:
+            Get directly in touch with us :
           </p>
           <div className="contact-icons hover-difference">
             <a href="https://www.facebook.com/erciitb">
