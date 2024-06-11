@@ -1,6 +1,6 @@
 import matter from 'gray-matter'
-import Layout from '../../components/Layout'
-import BlogList from '../../components/BlogList'
+import Layout from '../../blogs/Layout'
+import BlogList from '../../blog/BlogList'
 
 const Index = props => {
   return (
