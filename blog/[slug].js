@@ -1,7 +1,7 @@
 import * as React from 'react'
 import matter from 'gray-matter'
 import ReactMarkdown from 'react-markdown'
-import Layout from '../../components/Layout'
+import Layout from '../../blog/Layout'
 
 const glob = require('glob')
 const prefix = process.env.NEXT_PUBLIC_BASE_PATH || ""
