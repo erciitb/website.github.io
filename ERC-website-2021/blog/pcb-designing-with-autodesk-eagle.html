@@ -1,0 +1,233 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1" class="jsx-5c406e1c43a4c1e0"/><meta charSet="utf-8" class="jsx-5c406e1c43a4c1e0"/><title class="jsx-5c406e1c43a4c1e0">ERC: PCB Designing with Autodesk Eagle</title><meta name="Description" class="jsx-5c406e1c43a4c1e0"/><meta name="next-head-count" content="4"/><link rel="preload" href="/ERC-website-2021/_next/static/css/1e14cc6db1e7a797.css" as="style"/><link rel="stylesheet" href="/ERC-website-2021/_next/static/css/1e14cc6db1e7a797.css" data-n-g=""/><link rel="preload" href="/ERC-website-2021/_next/static/css/b4c3d7a1b2745c28.css" as="style"/><link rel="stylesheet" href="/ERC-website-2021/_next/static/css/b4c3d7a1b2745c28.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/ERC-website-2021/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/ERC-website-2021/_next/static/chunks/webpack-fa43d853eceb8330.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/framework-91d7f78b5b4003c8.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/main-7f98c67519643b43.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/pages/_app-8cb99849f9af73f7.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/147-3e7b67f404388648.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/157-8d95c7b28c8fe8df.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/pages/blog/%5Bslug%5D-771aa725b6e9cc01.js" defer=""></script><script src="/ERC-website-2021/_next/static/5QJC4znxUt28OyN5o0qMk/_buildManifest.js" defer=""></script><script src="/ERC-website-2021/_next/static/5QJC4znxUt28OyN5o0qMk/_ssgManifest.js" defer=""></script><script src="/ERC-website-2021/_next/static/5QJC4znxUt28OyN5o0qMk/_middlewareManifest.js" defer=""></script><style id="__jsx-5c406e1c43a4c1e0">@import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
+* {box-sizing:inherit}
+html {box-sizing:border-box;
+overflow-y:scroll}
+body {margin:0;
+font-family:"Work Sans", "Helvetica Neue", Helvetica, sans-serif;
+overflow-x:hidden;
+color:#000;
+font-size:16px;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale}
+a {-webkit-text-decoration:none;
+text-decoration:none;
+color:inherit;
+-webkit-transition:opacity 0.2s ease;
+transition:opacity 0.2s ease}
+a:hover {-webkit-transition:opacity 0.2s ease;
+transition:opacity 0.2s ease;
+opacity:0.5;
+text-decoration-color:inherit}
+ul {list-style:none;
+margin:0;
+padding-bottom:0;
+padding-left:0;
+padding-right:0;
+padding-top:0;
+list-style-position:outside;
+list-style-image:none}
+ol {margin:0;
+padding-bottom:0;
+padding-left:0;
+padding-right:0;
+padding-top:0;
+list-style-position:outside;
+list-style-image:none}
+ul, ol, p {margin-bottom:1.45rem}
+img {max-width:100%}
+img, figure, table, fieldset {margin-left:0;
+margin-right:0;
+margin-top:0;
+padding-bottom:0;
+padding-left:0;
+padding-right:0;
+padding-top:0;
+margin-bottom:1.45rem}
+pre {margin-left:0;
+margin-right:0;
+margin-top:0;
+margin-bottom:1.45rem;
+font-size:0.85rem;
+line-height:1.42;
+background:hsla(0, 0%, 0%, 0.04);
+border-radius:3px;
+overflow:auto;
+word-wrap:normal;
+padding:1.45rem}
+table {font-size:1rem;
+line-height:1.45rem;
+border-collapse:collapse;
+width:100%}
+blockquote {margin-left:1.45rem;
+margin-right:1.45rem;
+margin-top:0;
+padding-bottom:0;
+padding-left:0;
+padding-right:0;
+padding-top:0;
+margin-bottom:1.45rem}
+strong {font-weight:bold}
+li {margin-bottom:calc(1.45rem / 2)}
+ol li {padding-left:0}
+ul li {padding-left:0}
+li >ol {margin-left:1.45rem;
+margin-bottom:calc(1.45rem / 2);
+margin-top:calc(1.45rem / 2)}
+li >ul {margin-left:1.45rem;
+margin-bottom:calc(1.45rem / 2);
+margin-top:calc(1.45rem / 2)}
+blockquote *:last-child {margin-bottom:0}
+li *:last-child {margin-bottom:0}
+p *:last-child {margin-bottom:0}
+li >p {margin-bottom:calc(1.45rem / 2)}
+code {font-size:0.85rem;
+line-height:1.45rem}
+h1, h2, h3, h4, h5, h6, p {font-family:"Work Sans", "Helvetica Neue", Helvetica, sans-serif;
+margin-left:0;
+margin-right:0;
+margin-top:0;
+padding-bottom:0;
+padding-left:0;
+padding-right:0;
+padding-top:0;
+margin-bottom:1.45rem;
+color:inherit;
+text-rendering:optimizeLegibility}
+h1, h2 {font-weight:500}
+h1 {font-size:2rem;
+letter-spacing:-1px;
+line-height:1.1875}
+h2 {font-size:1.7rem;
+letter-spacing:-0.75px;
+line-height:1.2}
+h3 {font-size:1.2rem;
+letter-spacing:-0.5px;
+line-height:1.1875;
+color:#ffffff;
+font-weight:normal}
+p {font-size:1.2rem;
+letter-spacing:-0.5px;
+line-height:1.5;
+color:#ffffff}
+@media (min-width:1280px) {h1 {font-size:2rem;
+letter-spacing:-1px;
+line-height:1.1875}
+h2 {font-size:1.5rem;
+letter-spacing:-0.75px;
+line-height:1.1667}
+h3 {font-size:1rem;
+letter-spacing:-0.5px;
+line-height:1.1875;
+color:#ffffff;
+font-weight:normal}
+p {line-height:1.4375}}</style><style id="__jsx-fad75cd775d05681">.blog.jsx-fad75cd775d05681 {background-color:#1D252E;
+color:#ffffff;
+margin-bottom:0}
+.blog.jsx-fad75cd775d05681 h1.jsx-fad75cd775d05681 {margin-bottom:0.7rem}
+.blog__hero.jsx-fad75cd775d05681 {min-height:300px;
+height:60vh;
+width:100%;
+margin:0;
+overflow:hidden}
+.blog__hero.jsx-fad75cd775d05681 img.jsx-fad75cd775d05681 {margin-bottom:0;
+object-fit:cover;
+min-height:100%;
+min-width:100%;
+object-position:center}
+.blog__info.jsx-fad75cd775d05681 {padding:1.5rem 1.25rem;
+width:100%;
+max-width:768px;
+margin:0 auto}
+.blog__info.jsx-fad75cd775d05681 h1.jsx-fad75cd775d05681 {margin-bottom:0.66rem}
+.blog__info.jsx-fad75cd775d05681 h3.jsx-fad75cd775d05681 {margin-bottom:0}
+.blog__body.jsx-fad75cd775d05681 {width:100%;
+padding:0 1.25rem;
+margin:0 auto;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-flex-direction:column;
+-ms-flex-direction:column;
+flex-direction:column;
+-webkit-justify-content:center;
+justify-content:center}
+.blog__body.jsx-fad75cd775d05681 a.jsx-fad75cd775d05681 {padding-bottom:1.5rem}
+.blog__body.jsx-fad75cd775d05681:last-child {margin-bottom:0}
+.blog__body.jsx-fad75cd775d05681 h1.jsx-fad75cd775d05681 h2.jsx-fad75cd775d05681 h3.jsx-fad75cd775d05681 h4.jsx-fad75cd775d05681 h5.jsx-fad75cd775d05681 h6.jsx-fad75cd775d05681 p.jsx-fad75cd775d05681 {font-weight:normal}
+.blog__body.jsx-fad75cd775d05681 p.jsx-fad75cd775d05681 {color:#ffffff}
+.blog__body.jsx-fad75cd775d05681 ul.jsx-fad75cd775d05681 {list-style:initial}
+.blog__body.jsx-fad75cd775d05681 ul.jsx-fad75cd775d05681 ol.jsx-fad75cd775d05681 {margin-left:1.25rem;
+margin-bottom:1.25rem;
+padding-left:1.45rem}
+.blog__footer.jsx-fad75cd775d05681 {display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-box-pack:justify;
+-webkit-justify-content:space-between;
+justify-content:space-between;
+-webkit-align-items:center;
+-webkit-box-align:center;
+-ms-flex-align:center;
+align-items:center;
+padding:1.5rem 1.25rem;
+width:100%;
+max-width:800px;
+margin:0 auto}
+.blog__footer.jsx-fad75cd775d05681 h2.jsx-fad75cd775d05681 {margin-bottom:0}
+.blog__footer.jsx-fad75cd775d05681 a.jsx-fad75cd775d05681 {display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-box-pack:justify;
+-webkit-justify-content:space-between;
+justify-content:space-between;
+-webkit-align-items:center;
+-webkit-box-align:center;
+-ms-flex-align:center;
+align-items:center}
+.blog__footer.jsx-fad75cd775d05681 a.jsx-fad75cd775d05681 svg.jsx-fad75cd775d05681 {width:20px}
+@media (min-width:768px) {.blog.jsx-fad75cd775d05681 {display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-flex-direction:column;
+-ms-flex-direction:column;
+flex-direction:column}
+.blog__body.jsx-fad75cd775d05681 {max-width:800px;
+padding:0 2rem}
+.blog__body.jsx-fad75cd775d05681 span.jsx-fad75cd775d05681 {width:100%;
+margin:1.5rem auto}
+.blog__body.jsx-fad75cd775d05681 ul.jsx-fad75cd775d05681 ol.jsx-fad75cd775d05681 {margin-left:1.5rem;
+margin-bottom:1.5rem}
+.blog__hero.jsx-fad75cd775d05681 {min-height:600px;
+height:75vh}
+.blog__info.jsx-fad75cd775d05681 {text-align:center;
+padding:2rem 0}
+.blog__info.jsx-fad75cd775d05681 h1.jsx-fad75cd775d05681 {max-width:500px;
+margin:0 auto 0.66rem auto}
+.blog__footer.jsx-fad75cd775d05681 {padding:2.25rem}}
+@media (min-width:1440px) {.blog__hero.jsx-fad75cd775d05681 {height:70vh}
+.blog__info.jsx-fad75cd775d05681 {padding:3rem 0}
+.blog__footer.jsx-fad75cd775d05681 {padding:2rem 2rem 3rem 2rem}}</style><style id="__jsx-906dc5424778ca56">.layout.jsx-906dc5424778ca56 {overflow-x:hidden;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-flex-direction:column;
+-ms-flex-direction:column;
+flex-direction:column;
+min-height:100vh}
+.layout.jsx-906dc5424778ca56 .info_page.jsx-906dc5424778ca56 {color:#ebebeb}
+.content.jsx-906dc5424778ca56 {-webkit-box-flex:1;
+-webkit-flex-grow:1;
+-ms-flex-positive:1;
+flex-grow:1}
+@media (min-width:768px) {.layout.jsx-906dc5424778ca56 {display:block}
+.content.jsx-906dc5424778ca56 {-webkit-box-flex:none;
+-webkit-flex-grow:none;
+-ms-flex-positive:none;
+flex-grow:none;
+width:100vw;
+margin-left:0vw}}</style></head><body><div id="__next"><section style="background-color:undefined;color:false" class="jsx-906dc5424778ca56 layout false"><nav class="NavBar_navbar__D1PWG"><ul class="NavBar_list__ZV9KR"><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#home">Home</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="/ERC-website-2021/blog">Blog</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#events">Events</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#ercteamdet">Team Details</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#contact">Contact Us</a></li></ul></nav><div class="NavBar_navbar_mobile__9duUE"><div class="NavBar_hamburger_icon_block__a5VwY"><button href="/" class="NavBar_hamburger_icon_button__3TwpQ">☰</button></div><nav class="NavBar_nav_menu___omdq"><ul class="NavBar_nav_menu_items__gPV7x"><li class="NavBar_buttons_view__Rf_gB"><a href="/ERC-website-2021/blog/pcb-designing-with-autodesk-eagle#">Close ×</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#home">Home</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="/ERC-website-2021/blog">Blog</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#events">Events</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#ercteamdet">Team Details</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#contact">Contact Us</a></li></ul></nav></div><div class="jsx-906dc5424778ca56 content"><article class="jsx-fad75cd775d05681 blog"><figure class="jsx-fad75cd775d05681 blog__hero"><img src="/ERC-website-2021/static/pcb_cover.png" alt="blog_hero_PCB Designing with Autodesk Eagle" class="jsx-fad75cd775d05681"/></figure><div class="jsx-fad75cd775d05681 blog__info"><h1 class="jsx-fad75cd775d05681">PCB Designing with Autodesk Eagle</h1><h3 class="jsx-fad75cd775d05681">Nov 24 2021</h3></div><div class="jsx-fad75cd775d05681 blog__body"><p>PCB is an acronym for Printed Circuit Board. It is a board with many lines and pads that connects various points together using conductive pathways. Traces are etched on copper sheets to make these pathways and the sheets are then laminated on a non-conductive substrate board.</p><p><img src="/ERC-website-2021/static/pcb_image2.jpg"/></p><h1>Why are PCBs so important?</h1><p>PCBs were invented in 1936.<br/>Life before 1936:</p><p><img src="/ERC-website-2021/static/pcb_image1.jpg"/><br/>Imagine you are an electrical engineer tasked with debugging this!<br/>And don’t even get me started on maintaining such circuits</p><h1>Composition and structure</h1><p>The composition of a PCB is basically like a layered cake</p><p><img src="/ERC-website-2021/static/pcb_image3.jpg"/></p><p><strong>Silkscreen:</strong> The silkscreen adds letters, numbers, and symbols to the PCB that allow for easier readability.</p><p><strong>Substrate (FR4):</strong> The base material, or substrate, is usually fiberglass. This solid core gives the PCB its rigidity and thickness but keeps it flexible at the same time.</p><p><strong>Soldermask:</strong> This layer gives the PCB its distinctive green colour and is overlaid onto the copper layer to insulate the copper traces from accidental contact with other metal, solder, or conductive bits.</p><p><strong>Copper:</strong> Copper is laminated on both sides of the board with heat and adhesive. It electrically connects the electronic components and signals.</p><h1>Understanding PCB terminology and basic terms</h1><p>Now that we’ve got an idea of what a PCB structure is, let’s learn to read a PCB.</p><p>PCBs involve a lot of overwhelming terminology and jargon. The good news is you don’t need to understand every bit of it. A basic understanding will suffice to start with.</p><p>Here’s a link to a doc referring to the same:</p><h1>Autodesk EAGLE</h1><p>There are many PCB CAD softwares out there. But we will be covering EAGLE in this tutorial.</p><p><em>So what’s so special about EAGLE?</em></p><p>EAGLE is lightweight (50-200MB of disk space), free for students, has cross-platform support and most importantly has a great active community.</p><p><strong><em>Download, License and Install:</em></strong></p><p>EAGLE is free to <a href="https://www.autodesk.com/products/eagle/free-download">download</a> and install with a student’s license. Create/Log-on to your Autodesk account with your college ID and grab the version that matches your operating system.</p><p>EAGLE installs just like most programs. The download is an executable file; open it and follow the installation instructions. You can find the download link on A</p><p><strong><em>Libraries:</em></strong></p><p>Included with EAGLE is an impressive list of part libraries. These hundreds of libraries might be very useful for high end industrial PCB designing; but they end up becoming very overwhelming for us beginners.</p><p>The <a href="https://github.com/sparkfun/SparkFun-Eagle-Libraries">SparkFun EAGLE libraries</a> are a good starting point. They are easy to understand and are also frequently updated.</p><p>After downloading, navigate to Documents<!-- -->\<!-- -->EAGLE<!-- -->\<!-- -->libraries and paste the folder to add them to your resources.</p><p><strong><em>Creating your first project in EAGLE:</em></strong></p><p>Alright now, finally we can boot-up EAGLE and get started!</p><p>We&#x27;ll start by making a new <strong>project folder</strong> for our design. In the control panel, under the &quot;Projects&quot; tree, right click on the directory where you want the project to live and select <strong>&quot;New Project&quot;</strong> and give it a nice descriptive name.</p><p>The project folder will house both our schematic and board design files.</p><p>These are the yin and the yang of EAGLE. They should be used together to create the finished product that is a functional PCB design.</p><h1>The Schematic editor:</h1><p>To add a schematic to a project folder, right-click the folder, hover over <strong>&quot;New&quot;</strong> and select <strong>&quot;Schematic&quot;</strong>. A new blank window will immediately pop-up.</p><p>Welcome to the schematic editor!</p><p>Schematic designing in EAGLE is like adding a few parts, wiring them, then adding some more and then wiring them again.</p><p>Adding Parts to a Schematic</p><p>The ADD tool <img src="/ERC-website-2021/static/pcb_image5.png"/> opens up a library navigator, where you can expand specific libraries and look at the parts it holds. The most important functionality of the ADD tool is probably the search bar.</p><p>The search is very literal, so don&#x27;t misspell stuff! A very crucial tip is the use of asterisks (*) before and after every component. This makes the search more lenient.</p><p>For example, if you search for <em>atmega328</em> you should find a single part in the library, but if you search <em>atmega328</em> (note asterisks before and after), you&#x27;ll discover two more versions of the IC (because they&#x27;re actually named &quot;ATMEGA328<em>P</em>&quot;).</p><p>Add all the components, connectors and the power inputs using this tool.</p><p>After placing the parts, if you need to move them around, use the MOVE tool -- <img src="/ERC-website-2021/static/pcb_image4.png"/></p><p><strong><em>Wiring Up the Schematic:</em></strong></p><p>There&#x27;s one major caveat here before we start: even though we&#x27;re wiring parts on the schematic, we not going to use the WIRE tool --<img src="/ERC-website-2021/static/pcb_image7.png"/>-- to connect them together. Instead, we&#x27;ll use the NET tool -- <img src="/ERC-website-2021/static/pcb_image6.png"/>. The WIRE tool would be better-named as a line-drawing tool, NET does a better job of connecting components.</p><p>Hover over the very end of a pin (as close as possible, zoom in if you have to), and left-click once to start a wire. Now a green line should be following your mouse cursor around. To terminate the net, left-click on either another pin or a net. Start by routing the easiest and closest ones first.</p><p>Suppose you encounter a pin that is to be connected to a component all the way on the other side. You could do it, it would work, but it&#x27;d be really ugly. Instead, we use the NAME tool -- <img src="/ERC-website-2021/static/pcb_image10.png"/> and the LABEL tool -- <img src="/ERC-website-2021/static/pcb_image8.png"/>.</p><p>Begin by starting a net at a pin, just as you&#x27;ve been doing. Terminate the net by left-clicking a few grid-lengths over to the right of the pin. Then, instead of routing to another pin, just hit ESC to finish the route. With the NAME tool selected now click on the net and give it a short descriptive name. In the same way, create an unfinished net connected to the component and give it the same name as before. This should result in a warning dialog, asking you if you want to connect this net to all of the other nets with the same name. Thanks for looking out for us EAGLE, but in this case <em>Yes</em> we do want to connect them.</p><p>After naming a net, you should use the LABEL tool -- <img src="/ERC-website-2021/static/pcb_image8.png"/> -- to add a text label for better readability.</p><p>Some other useful tools:</p><ul><li>The GROUP tool -- <img src="/ERC-website-2021/static/pcb_image11.png"/></li></ul><p>In order to perform any action on a group, you have to select the tool, then <strong>hold down CTRL</strong> and <strong>right-click the group</strong>. After you CTRL+right-click, the tool will operate on the group just as it does a single component.</p><ul><li>The SHOW tool -- <img src="/ERC-website-2021/static/pcb_image13.png"/></li></ul><p>If you use SHOW on a net, every pin it&#x27;s connected to should light up verifying that pins across your schematic are connected correctly.</p><ul><li>COPY -- <img src="/ERC-website-2021/static/pcb_image14.png"/>-- and PASTE -- <img src="/ERC-website-2021/static/pcb_image15.png"/> -- tools</li></ul><p>EAGLE&#x27;s Copy and Paste tools don&#x27;t work exactly like other copy/paste tools you may have encountered before. Copy actually performs both a copy and paste when it&#x27;s used while Paste can only be used to paste a <strong>group</strong> that has previously been copied to your clipboard.</p><h1>The Board Editor:</h1><p>EAGLE&#x27;s board designer is where a good portion of the magic happens.</p><p>When you are done with the basic schematic of your design, simply click on the <em>Generate/Switch to Board</em> command -- <img src="/ERC-website-2021/static/pcb_image16.png"/>. A Board Editor window will open with all your parts stacked on one another connected with golden air-wires ready to be placed and routed.</p><p>Before getting started with laying down the components, it is imperative to first adjust the grid. Click on the GRID icon -- <img src="/ERC-website-2021/static/pcb_image17.png"/> and adjust the size. Generally, a 0.05&quot; grid, and 0.005&quot; alternate grid is a good size but do check it according to your specific requirements.</p><p><strong><em>Laying the Board:</em></strong></p><p>Use the MOVE tool <img src="/ERC-website-2021/static/pcb_image4.png"/> to arrange your parts, right-clicking will rotate the part. The way you arrange your parts has a huge impact on how easy or hard the next step will be.</p><p>Here are a few things to keep in mind:</p><ul><li><strong>Don’t overlap parts</strong>: All parts need to have some clearance between them to ensure the signals don’t short circuit.</li><li><strong>Minimize intersecting air-wires</strong>: Limiting criss-crossing air-wires will make routing <em>much</em> easier in the long run.</li><li><strong>Part placement requirements</strong>: Some parts may require special considerations like the power connector will always be placed on the edge of the board.</li><li><strong>Cost vs. Effort: The tighter your board is the cheaper it is, but it also makes routing that much harder.</strong></li></ul><p><strong><em>Routing the Board</em></strong></p><p>Routing is probably the most fun part of PCB designing. It’s almost like solving a puzzle.</p><p>Click on the ROUTE tool and route away! On a 2-layer board, you can route the wires in either red or blue colour. Each colour specifying a different copper layer that you can switch using your middle-mouse button. You can also change the Bend style and Width of your routes. Usually, you will want to keep it 45 degrees and 0.01”.</p><p><img src="/ERC-website-2021/static/pcb_image18.png"/></p><p>Another important thing to remember while routing is to avoid overlaps of any sort. If traces do cross each other on opposite sides of the board, it&#x27;s perfectly. That&#x27;s why there are two layers!</p><p><strong><em>Vias:</em></strong></p><p>Vias are a cool workaround to avoid overlaps. It allows you to travel between the red and blue layers. But don’t get carried away because more vias mean more money.</p><p><strong><em>The Alternate grid:</em></strong></p><p>If you need more precision, hold down the ALT key to access the alternate grid. But do make sure to keep enough route clearance. A good rule of thumb is to keep enough space between two routes to run another one between them.</p><p><strong><em>The Auto-Router:</em></strong></p><p>Cheater! If you are short on time or having trouble routing the PCB yourself you can use EAGLE’s Autorouter <img src="/ERC-website-2021/static/pcb_image19.png"/>. It gets the job done but has no regard for your cost constraints.</p><p><strong><em>Checking for Errors:</em></strong></p><p>There are two checks to perform before we can package the PCB and send it to the fabrication house.</p><ol><li><strong>Ratsnest:</strong></li></ol><p>The RATSNEST tool <img src="/ERC-website-2021/static/pcb_image20.png"/> checks if you have routed everything and say the sweetest words a PCB designer can ever hear: <img src="/ERC-website-2021/static/pcb_image9.png"/></p><ol><li><strong>Design Rule Check (DRC)</strong></li></ol><p>The DRC <img src="/ERC-website-2021/static/pcb_image12.png"/> can provide all sorts of errors like if a trace is too close to either another trace or a via, or two different signal traces are overlapping each other or even if a trace, pad, or via is intersecting with (or too close to) a dimension line.</p></div><h2 class="jsx-fad75cd775d05681 blog__footer">Written By: <!-- -->Kaushal Jadhav</h2></article></div><div class="contact-section" id="contact"><div class="contact-details"><p id="contact-text" class="hover-difference">Get directly in touch with us:</p><div class="contact-icons hover-difference"><a href="https://www.facebook.com/erciitb"><i class="fab fa-facebook-square"></i></a><a href="https://www.instagram.com/erc.iitb/"><i class="fab fa-instagram"></i></a><a href="mailto:erciitbombay@gmail.com"><i class="far fa-envelope"></i></a></div><a href="mailto:elecrobo.club@iitb.ac.in" id="contact-mail" class="hover-difference">elecrobo.club@iitb.ac.in</a><button class="contact-form-button">Message us</button></div><div class="contact-form-map-mix-outer"><div class="contact-form-map-mix-inner"><div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.6786880670256!2d72.9138437580561!3d19.13376545835707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7f5e4ac7efd%3A0xd9d02f29b4617fb4!2sTinkerers&#x27;%20Laboratory!5e0!3m2!1sen!2sin!4v1597995010048!5m2!1sen!2sin" frameBorder="0" style="border:0" aria-hidden="false" tabindex="0"></iframe></div><div class="contact-form"><form action="./form-submit.php" method="POST" id="validated-form"><div class="contact-form-element"><label for="name">Name</label><input type="text" name="name" id="contact-user-name" required=""/></div><div class="contact-form-element"><label for="email">Email</label><input type="text" name="email" id="contact-user-email" required=""/></div><div class="contact-form-element"><label for="message">Message</label><textarea name="message" maxlength="10000" cols="30" rows="4" id="contact-user-message"></textarea></div></form></div></div></div></div></section></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"siteTitle":"ERC: PCB Designing with Autodesk Eagle","frontmatter":{"title":"PCB Designing with Autodesk Eagle","author":"Kaushal Jadhav","hero_image":"/ERC-website-2021/static/pcb_cover.png","date":"2021-11-24T12:30:00.000Z"},"markdownBody":"PCB is an acronym for Printed Circuit Board. It is a board with many lines and pads that connects various points together using conductive pathways. Traces are etched on copper sheets to make these pathways and the sheets are then laminated on a non-conductive substrate board.\n\n![](/ERC-website-2021/static/pcb_image2.jpg)\n\n# Why are PCBs so important?\n\nPCBs were invented in 1936.  \nLife before 1936:\n\n![](/ERC-website-2021/static/pcb_image1.jpg)  \nImagine you are an electrical engineer tasked with debugging this!  \nAnd don’t even get me started on maintaining such circuits\n\n# Composition and structure\n\nThe composition of a PCB is basically like a layered cake\n\n![](/ERC-website-2021/static/pcb_image3.jpg)\n\n**Silkscreen:** The silkscreen adds letters, numbers, and symbols to the PCB that allow for easier readability.\n\n**Substrate (FR4):** The base material, or substrate, is usually fiberglass. This solid core gives the PCB its rigidity and thickness but keeps it flexible at the same time.\n\n**Soldermask:** This layer gives the PCB its distinctive green colour and is overlaid onto the copper layer to insulate the copper traces from accidental contact with other metal, solder, or conductive bits.\n\n**Copper:** Copper is laminated on both sides of the board with heat and adhesive. It electrically connects the electronic components and signals.\n\n# Understanding PCB terminology and basic terms\n\nNow that we’ve got an idea of what a PCB structure is, let’s learn to read a PCB.\n\nPCBs involve a lot of overwhelming terminology and jargon. The good news is you don’t need to understand every bit of it. A basic understanding will suffice to start with.\n\nHere’s a link to a doc referring to the same:\n\n# Autodesk EAGLE\n\nThere are many PCB CAD softwares out there. But we will be covering EAGLE in this tutorial.\n\n_So what’s so special about EAGLE?_\n\nEAGLE is lightweight (50-200MB of disk space), free for students, has cross-platform support and most importantly has a great active community.\n\n**_Download, License and Install:_**\n\nEAGLE is free to [download](https://www.autodesk.com/products/eagle/free-download) and install with a student’s license. Create/Log-on to your Autodesk account with your college ID and grab the version that matches your operating system.\n\nEAGLE installs just like most programs. The download is an executable file; open it and follow the installation instructions. You can find the download link on A\n\n**_Libraries:_**\n\nIncluded with EAGLE is an impressive list of part libraries. These hundreds of libraries might be very useful for high end industrial PCB designing; but they end up becoming very overwhelming for us beginners.\n\nThe [SparkFun EAGLE libraries](https://github.com/sparkfun/SparkFun-Eagle-Libraries) are a good starting point. They are easy to understand and are also frequently updated.\n\nAfter downloading, navigate to Documents\\\\EAGLE\\\\libraries and paste the folder to add them to your resources.\n\n**_Creating your first project in EAGLE:_**\n\nAlright now, finally we can boot-up EAGLE and get started!\n\nWe'll start by making a new **project folder** for our design. In the control panel, under the \"Projects\" tree, right click on the directory where you want the project to live and select **\"New Project\"** and give it a nice descriptive name.\n\nThe project folder will house both our schematic and board design files.\n\nThese are the yin and the yang of EAGLE. They should be used together to create the finished product that is a functional PCB design.\n\n# The Schematic editor:\n\nTo add a schematic to a project folder, right-click the folder, hover over **\"New\"** and select **\"Schematic\"**. A new blank window will immediately pop-up.\n\nWelcome to the schematic editor!\n\nSchematic designing in EAGLE is like adding a few parts, wiring them, then adding some more and then wiring them again.\n\nAdding Parts to a Schematic\n\nThe ADD tool ![](/ERC-website-2021/static/pcb_image5.png) opens up a library navigator, where you can expand specific libraries and look at the parts it holds. The most important functionality of the ADD tool is probably the search bar.\n\nThe search is very literal, so don't misspell stuff! A very crucial tip is the use of asterisks (*) before and after every component. This makes the search more lenient.\n\nFor example, if you search for _atmega328_ you should find a single part in the library, but if you search _atmega328_ (note asterisks before and after), you'll discover two more versions of the IC (because they're actually named \"ATMEGA328_P_\").\n\nAdd all the components, connectors and the power inputs using this tool.\n\nAfter placing the parts, if you need to move them around, use the MOVE tool -- ![](/ERC-website-2021/static/pcb_image4.png)\n\n**_Wiring Up the Schematic:_**\n\nThere's one major caveat here before we start: even though we're wiring parts on the schematic, we not going to use the WIRE tool --![](/ERC-website-2021/static/pcb_image7.png)-- to connect them together. Instead, we'll use the NET tool -- ![](/ERC-website-2021/static/pcb_image6.png). The WIRE tool would be better-named as a line-drawing tool, NET does a better job of connecting components.\n\nHover over the very end of a pin (as close as possible, zoom in if you have to), and left-click once to start a wire. Now a green line should be following your mouse cursor around. To terminate the net, left-click on either another pin or a net. Start by routing the easiest and closest ones first.\n\nSuppose you encounter a pin that is to be connected to a component all the way on the other side. You could do it, it would work, but it'd be really ugly. Instead, we use the NAME tool -- ![](/ERC-website-2021/static/pcb_image10.png) and the LABEL tool -- ![](/ERC-website-2021/static/pcb_image8.png).\n\nBegin by starting a net at a pin, just as you've been doing. Terminate the net by left-clicking a few grid-lengths over to the right of the pin. Then, instead of routing to another pin, just hit ESC to finish the route. With the NAME tool selected now click on the net and give it a short descriptive name. In the same way, create an unfinished net connected to the component and give it the same name as before. This should result in a warning dialog, asking you if you want to connect this net to all of the other nets with the same name. Thanks for looking out for us EAGLE, but in this case _Yes_ we do want to connect them.\n\nAfter naming a net, you should use the LABEL tool -- ![](/ERC-website-2021/static/pcb_image8.png) -- to add a text label for better readability.\n\nSome other useful tools:\n\n* The GROUP tool -- ![](/ERC-website-2021/static/pcb_image11.png)\n\nIn order to perform any action on a group, you have to select the tool, then **hold down CTRL** and **right-click the group**. After you CTRL+right-click, the tool will operate on the group just as it does a single component.\n\n* The SHOW tool -- ![](/ERC-website-2021/static/pcb_image13.png)\n\nIf you use SHOW on a net, every pin it's connected to should light up verifying that pins across your schematic are connected correctly.\n\n* COPY -- ![](/ERC-website-2021/static/pcb_image14.png)-- and PASTE -- ![](/ERC-website-2021/static/pcb_image15.png) -- tools\n\nEAGLE's Copy and Paste tools don't work exactly like other copy/paste tools you may have encountered before. Copy actually performs both a copy and paste when it's used while Paste can only be used to paste a **group** that has previously been copied to your clipboard.\n\n# The Board Editor:\n\nEAGLE's board designer is where a good portion of the magic happens.\n\nWhen you are done with the basic schematic of your design, simply click on the _Generate/Switch to Board_ command -- ![](/ERC-website-2021/static/pcb_image16.png). A Board Editor window will open with all your parts stacked on one another connected with golden air-wires ready to be placed and routed.\n\nBefore getting started with laying down the components, it is imperative to first adjust the grid. Click on the GRID icon -- ![](/ERC-website-2021/static/pcb_image17.png) and adjust the size. Generally, a 0.05\" grid, and 0.005\" alternate grid is a good size but do check it according to your specific requirements.\n\n**_Laying the Board:_**\n\nUse the MOVE tool ![](/ERC-website-2021/static/pcb_image4.png) to arrange your parts, right-clicking will rotate the part. The way you arrange your parts has a huge impact on how easy or hard the next step will be.\n\nHere are a few things to keep in mind:\n\n* **Don’t overlap parts**: All parts need to have some clearance between them to ensure the signals don’t short circuit.\n* **Minimize intersecting air-wires**: Limiting criss-crossing air-wires will make routing _much_ easier in the long run.\n* **Part placement requirements**: Some parts may require special considerations like the power connector will always be placed on the edge of the board.\n* **Cost vs. Effort: The tighter your board is the cheaper it is, but it also makes routing that much harder.**\n\n**_Routing the Board_**\n\nRouting is probably the most fun part of PCB designing. It’s almost like solving a puzzle.\n\nClick on the ROUTE tool and route away! On a 2-layer board, you can route the wires in either red or blue colour. Each colour specifying a different copper layer that you can switch using your middle-mouse button. You can also change the Bend style and Width of your routes. Usually, you will want to keep it 45 degrees and 0.01”.\n\n![](/ERC-website-2021/static/pcb_image18.png)\n\nAnother important thing to remember while routing is to avoid overlaps of any sort. If traces do cross each other on opposite sides of the board, it's perfectly. That's why there are two layers!\n\n**_Vias:_**\n\nVias are a cool workaround to avoid overlaps. It allows you to travel between the red and blue layers. But don’t get carried away because more vias mean more money.\n\n**_The Alternate grid:_**\n\nIf you need more precision, hold down the ALT key to access the alternate grid. But do make sure to keep enough route clearance. A good rule of thumb is to keep enough space between two routes to run another one between them.\n\n**_The Auto-Router:_**\n\nCheater! If you are short on time or having trouble routing the PCB yourself you can use EAGLE’s Autorouter ![](/ERC-website-2021/static/pcb_image19.png). It gets the job done but has no regard for your cost constraints.\n\n**_Checking for Errors:_**\n\nThere are two checks to perform before we can package the PCB and send it to the fabrication house.\n\n1. **Ratsnest:**\n\nThe RATSNEST tool ![](/ERC-website-2021/static/pcb_image20.png) checks if you have routed everything and say the sweetest words a PCB designer can ever hear: ![](/ERC-website-2021/static/pcb_image9.png)\n\n1. **Design Rule Check (DRC)**\n\nThe DRC ![](/ERC-website-2021/static/pcb_image12.png) can provide all sorts of errors like if a trace is too close to either another trace or a via, or two different signal traces are overlapping each other or even if a trace, pad, or via is intersecting with (or too close to) a dimension line."},"__N_SSG":true},"page":"/blog/[slug]","query":{"slug":"pcb-designing-with-autodesk-eagle"},"buildId":"5QJC4znxUt28OyN5o0qMk","assetPrefix":"/ERC-website-2021","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
