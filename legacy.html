@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Card Carousel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cursor.css">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">-->
+</head>
+<body background ="\erciitb.github.io\Black and Orange Modern Food Landing Page Desktop Prototype (2).png">
+
+    <div class="container">
+        <input type="radio" name="slider" id="s1" checked>
+        <input type="radio" name="slider" id="s2">
+        <input type="radio" name="slider" id="s3">
+        <input type="radio" name="slider" id="s4">
+        <input type="radio" name="slider" id="s5">
+
+        <div class="cards">
+            <label for="s1" id="slide1">
+                <div class="card">
+                    <div class="image">
+                        <img src="\erciitb.github.io\team photo.jpeg" alt="Image 1">
+                        <div class="dots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <span class="name">Nike SuperRep Go</span>
+                        <span class="name">Good product</span>
+                        <a href="#detail" class="btn-detail">Detail</a>
+                        <div class="action">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-bookmark"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+                </div>
+            </label>
+
+            <label for="s2" id="slide2">
+                <div class="card">
+                    <div class="image">
+                        <img src="\erciitb.github.io\team photo.jpeg" alt="Image 2">
+                        <div class="dots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <span class="name">KK SuperRep Go</span>
+                        <span class="name">Good product</span>
+                        <a href="#detail" class="btn-detail">Detail</a>
+                        <div class="action">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-bookmark"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+                </div>
+            </label>
+
+            <label for="s3" id="slide3">
+                <div class="card">
+                    <div class="image">
+                        <img src="\erciitb.github.io\team photo.jpeg" alt="Image 3">
+                        <div class="dots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <span class="name">RR SuperRep Go</span>
+                        <span class="name">Good product</span>
+                        <a href="#detail" class="btn-detail">Detail</a>
+                        <div class="action">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-bookmark"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+                </div>
+            </label>
+
+            <label for="s4" id="slide4">
+                <div class="card">
+                    <div class="image">
+                        <img src="\erciitb.github.io\team photo.jpeg" alt="Image 4">
+                        <div class="dots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <span class="name">OO SuperRep Go</span>
+                        <span class="name">Good product</span>
+                        <a href="#detail" class="btn-detail">Detail</a>
+                        <div class="action">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-bookmark"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+                </div>
+            </label>
+
+            <label for="s5" id="slide5">
+                <div class="card">
+                    <div class="image">
+                        <img src="\erciitb.github.io\team photo.jpeg" alt="Image 5">
+                        <div class="dots">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="infos">
+                        <span class="name">PP SuperRep Go</span>
+                        <span class="name">Good product</span>
+                        <a href="#detail" class="btn-detail">Detail</a>
+                        <div class="action">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-bookmark"></i>
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </div>
+                    </div>
+                </div>
+            </label>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <div class="navbar">
+        <a href="index.html#contacta">Contact Us</a>
+        <a href="index.html#ercteamdet">Team Detail</a>
+        <a href="#legacy">Legacy</a>
+        <a href="events.html">Events</a>
+        <a href="blog.html">Blogs</a>
+        <a href="index.html">Home</a>
+    </div>
+
+    <div class="container1">
+        <div class="left-images">
+            <img src="\erciitb.github.io\erc logo.png" alt="Image 1" class="fixed-image1">
+            <img src="\erciitb.github.io\ERC big logo.png" alt="Image 2" class="fixed-image2">
+            <img src="\erciitb.github.io\Screenshot_2024-07-02_234930-removebg-preview.png" alt="Image 3" class="fixed-image3">
+        </div>
+    </div>
+
+    <div class="cursor">
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        function nextSlide() {
+            currentSlide = currentSlide === 5 ? 1 : currentSlide + 1;
+            document.getElementById(`s${currentSlide}`).checked = true;
+        }
+        function prevSlide() {
+            currentSlide = currentSlide === 1 ? 5 : currentSlide - 1;
+            document.getElementById(`s${currentSlide}`).checked = true;
+        }
+    </script>
+
+    <script src="cursor.js">
+    </script>
+
+
+</body>
+</html>
