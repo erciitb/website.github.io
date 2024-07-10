@@ -1,219 +1,816 @@
-<!DOCTYPE html><html><head><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1" class="jsx-5c406e1c43a4c1e0"/><meta charSet="utf-8" class="jsx-5c406e1c43a4c1e0"/><title class="jsx-5c406e1c43a4c1e0">ERC: Events</title><meta name="Description" class="jsx-5c406e1c43a4c1e0"/><meta name="next-head-count" content="4"/><link rel="preload" href="/ERC-website-2021/_next/static/css/1e14cc6db1e7a797.css" as="style"/><link rel="stylesheet" href="/ERC-website-2021/_next/static/css/1e14cc6db1e7a797.css" data-n-g=""/><link rel="preload" href="/ERC-website-2021/_next/static/css/b4c3d7a1b2745c28.css" as="style"/><link rel="stylesheet" href="/ERC-website-2021/_next/static/css/b4c3d7a1b2745c28.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/ERC-website-2021/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/ERC-website-2021/_next/static/chunks/webpack-fa43d853eceb8330.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/framework-91d7f78b5b4003c8.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/main-7f98c67519643b43.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/pages/_app-8cb99849f9af73f7.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/147-3e7b67f404388648.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/157-8d95c7b28c8fe8df.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/pages/events-3a605cd642bc02ea.js" defer=""></script><script src="/ERC-website-2021/_next/static/5QJC4znxUt28OyN5o0qMk/_buildManifest.js" defer=""></script><script src="/ERC-website-2021/_next/static/5QJC4znxUt28OyN5o0qMk/_ssgManifest.js" defer=""></script><script src="/ERC-website-2021/_next/static/5QJC4znxUt28OyN5o0qMk/_middlewareManifest.js" defer=""></script><style id="__jsx-5c406e1c43a4c1e0">@import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
-* {box-sizing:inherit}
-html {box-sizing:border-box;
-overflow-y:scroll}
-body {margin:0;
-font-family:"Work Sans", "Helvetica Neue", Helvetica, sans-serif;
-overflow-x:hidden;
-color:#000;
-font-size:16px;
--webkit-font-smoothing:antialiased;
--moz-osx-font-smoothing:grayscale}
-a {-webkit-text-decoration:none;
-text-decoration:none;
-color:inherit;
--webkit-transition:opacity 0.2s ease;
-transition:opacity 0.2s ease}
-a:hover {-webkit-transition:opacity 0.2s ease;
-transition:opacity 0.2s ease;
-opacity:0.5;
-text-decoration-color:inherit}
-ul {list-style:none;
-margin:0;
-padding-bottom:0;
-padding-left:0;
-padding-right:0;
-padding-top:0;
-list-style-position:outside;
-list-style-image:none}
-ol {margin:0;
-padding-bottom:0;
-padding-left:0;
-padding-right:0;
-padding-top:0;
-list-style-position:outside;
-list-style-image:none}
-ul, ol, p {margin-bottom:1.45rem}
-img {max-width:100%}
-img, figure, table, fieldset {margin-left:0;
-margin-right:0;
-margin-top:0;
-padding-bottom:0;
-padding-left:0;
-padding-right:0;
-padding-top:0;
-margin-bottom:1.45rem}
-pre {margin-left:0;
-margin-right:0;
-margin-top:0;
-margin-bottom:1.45rem;
-font-size:0.85rem;
-line-height:1.42;
-background:hsla(0, 0%, 0%, 0.04);
-border-radius:3px;
-overflow:auto;
-word-wrap:normal;
-padding:1.45rem}
-table {font-size:1rem;
-line-height:1.45rem;
-border-collapse:collapse;
-width:100%}
-blockquote {margin-left:1.45rem;
-margin-right:1.45rem;
-margin-top:0;
-padding-bottom:0;
-padding-left:0;
-padding-right:0;
-padding-top:0;
-margin-bottom:1.45rem}
-strong {font-weight:bold}
-li {margin-bottom:calc(1.45rem / 2)}
-ol li {padding-left:0}
-ul li {padding-left:0}
-li >ol {margin-left:1.45rem;
-margin-bottom:calc(1.45rem / 2);
-margin-top:calc(1.45rem / 2)}
-li >ul {margin-left:1.45rem;
-margin-bottom:calc(1.45rem / 2);
-margin-top:calc(1.45rem / 2)}
-blockquote *:last-child {margin-bottom:0}
-li *:last-child {margin-bottom:0}
-p *:last-child {margin-bottom:0}
-li >p {margin-bottom:calc(1.45rem / 2)}
-code {font-size:0.85rem;
-line-height:1.45rem}
-h1, h2, h3, h4, h5, h6, p {font-family:"Work Sans", "Helvetica Neue", Helvetica, sans-serif;
-margin-left:0;
-margin-right:0;
-margin-top:0;
-padding-bottom:0;
-padding-left:0;
-padding-right:0;
-padding-top:0;
-margin-bottom:1.45rem;
-color:inherit;
-text-rendering:optimizeLegibility}
-h1, h2 {font-weight:500}
-h1 {font-size:2rem;
-letter-spacing:-1px;
-line-height:1.1875}
-h2 {font-size:1.7rem;
-letter-spacing:-0.75px;
-line-height:1.2}
-h3 {font-size:1.2rem;
-letter-spacing:-0.5px;
-line-height:1.1875;
-color:#ffffff;
-font-weight:normal}
-p {font-size:1.2rem;
-letter-spacing:-0.5px;
-line-height:1.5;
-color:#ffffff}
-@media (min-width:1280px) {h1 {font-size:2rem;
-letter-spacing:-1px;
-line-height:1.1875}
-h2 {font-size:1.5rem;
-letter-spacing:-0.75px;
-line-height:1.1667}
-h3 {font-size:1rem;
-letter-spacing:-0.5px;
-line-height:1.1875;
-color:#ffffff;
-font-weight:normal}
-p {line-height:1.4375}}</style><style id="__jsx-891cd4241e1082f5">.title.jsx-891cd4241e1082f5 {color:white;
-font-size:80px;
-margin:20px}
-.list.jsx-891cd4241e1082f5 {background-color:#1D252E;
-color:#ffffff;
-margin-bottom:0}
-a.jsx-891cd4241e1082f5:hover {opacity:1}
-a.jsx-891cd4241e1082f5:hover li.jsx-891cd4241e1082f5 div.hero_image.jsx-891cd4241e1082f5 img.jsx-891cd4241e1082f5 {opacity:0.8;
--webkit-transition:opacity 0.3s ease;
-transition:opacity 0.3s ease}
-a.jsx-891cd4241e1082f5:hover li.jsx-891cd4241e1082f5 .blog__info.jsx-891cd4241e1082f5 h2.jsx-891cd4241e1082f5, a.jsx-891cd4241e1082f5:hover li.jsx-891cd4241e1082f5 .blog__info.jsx-891cd4241e1082f5 h3.jsx-891cd4241e1082f5, a.jsx-891cd4241e1082f5:hover li.jsx-891cd4241e1082f5 .blog__info.jsx-891cd4241e1082f5 p.jsx-891cd4241e1082f5 {-webkit-transform:translateX(10px);
--moz-transform:translateX(10px);
--ms-transform:translateX(10px);
-transform:translateX(10px);
--webkit-transition:-webkit-transform 0.5s ease-out;
-transition:transform 0.5s ease-out}
-.hero_image.jsx-891cd4241e1082f5 {width:100%;
-height:33vh;
-overflow:hidden;
-background-color:#000}
-.hero_image.jsx-891cd4241e1082f5 img.jsx-891cd4241e1082f5 {object-fit:cover;
-object-position:50% 50%;
-opacity:1;
--webkit-transition:opacity 0.3s ease;
-transition:opacity 0.3s ease;
-min-height:100%}
-.blog__info.jsx-891cd4241e1082f5 {display:-webkit-box;
-display:-webkit-flex;
-display:-ms-flexbox;
-display:flex;
--webkit-flex-direction:column;
--ms-flex-direction:column;
-flex-direction:column;
--webkit-justify-content:center;
-justify-content:center;
-padding:1.5rem 1.25rem;
--webkit-transform:translateX(0px);
--moz-transform:translateX(0px);
--ms-transform:translateX(0px);
-transform:translateX(0px);
--webkit-transition:-webkit-transform 0.3s ease-in;
-transition:transform 0.3s ease-in;
-border-bottom:1px solid #000}
-.blog__info.jsx-891cd4241e1082f5 h2.jsx-891cd4241e1082f5, .blog__info.jsx-891cd4241e1082f5 h3.jsx-891cd4241e1082f5, .blog__info.jsx-891cd4241e1082f5 p.jsx-891cd4241e1082f5 {-webkit-transform:translateX(0px);
--moz-transform:translateX(0px);
--ms-transform:translateX(0px);
-transform:translateX(0px);
--webkit-transition:-webkit-transform 0.5s ease-out;
-transition:transform 0.5s ease-out}
-li.jsx-891cd4241e1082f5 {opacity:inherit;
-display:-webkit-box;
-display:-webkit-flex;
-display:-ms-flexbox;
-display:flex;
--webkit-justify-content:center;
-justify-content:center;
--webkit-flex-direction:column;
--ms-flex-direction:column;
-flex-direction:column;
-min-height:38vh;
-margin-bottom:0}
-h2.jsx-891cd4241e1082f5 {margin-bottom:0.5rem}
-h3.jsx-891cd4241e1082f5 {margin-bottom:1rem}
-p.jsx-891cd4241e1082f5 {max-width:900px}
-@media (min-width:768px) {li.jsx-891cd4241e1082f5 {min-height:250px;
-height:33.333vh;
--webkit-flex-direction:row;
--ms-flex-direction:row;
-flex-direction:row}
-.hero_image.jsx-891cd4241e1082f5 {height:100%}
-.hero_image.jsx-891cd4241e1082f5 img.jsx-891cd4241e1082f5 {min-width:100%;
-height:100%;
-width:auto;
-min-height:0}
-.blog__info.jsx-891cd4241e1082f5 {min-width:70%}}
-@media (min-width:1280px) {.blog__info.jsx-891cd4241e1082f5 {padding:3rem}
-h3.jsx-891cd4241e1082f5 {margin-bottom:1.2rem}}</style><style id="__jsx-906dc5424778ca56">.layout.jsx-906dc5424778ca56 {overflow-x:hidden;
-display:-webkit-box;
-display:-webkit-flex;
-display:-ms-flexbox;
-display:flex;
--webkit-flex-direction:column;
--ms-flex-direction:column;
-flex-direction:column;
-min-height:100vh}
-.layout.jsx-906dc5424778ca56 .info_page.jsx-906dc5424778ca56 {color:#ebebeb}
-.content.jsx-906dc5424778ca56 {-webkit-box-flex:1;
--webkit-flex-grow:1;
--ms-flex-positive:1;
-flex-grow:1}
-@media (min-width:768px) {.layout.jsx-906dc5424778ca56 {display:block}
-.content.jsx-906dc5424778ca56 {-webkit-box-flex:none;
--webkit-flex-grow:none;
--ms-flex-positive:none;
-flex-grow:none;
-width:100vw;
-margin-left:0vw}}</style></head><body><div id="__next"><section style="background-color:undefined;color:false" class="jsx-906dc5424778ca56 layout false"><nav class="NavBar_navbar__D1PWG"><ul class="NavBar_list__ZV9KR"><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#home">Home</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="/ERC-website-2021/blog">Blog</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#events">Events</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#ercteamdet">Team Details</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#contact">Contact Us</a></li></ul></nav><div class="NavBar_navbar_mobile__9duUE"><div class="NavBar_hamburger_icon_block__a5VwY"><button href="/" class="NavBar_hamburger_icon_button__3TwpQ">☰</button></div><nav class="NavBar_nav_menu___omdq"><ul class="NavBar_nav_menu_items__gPV7x"><li class="NavBar_buttons_view__Rf_gB"><a href="/ERC-website-2021/events#">Close ×</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#home">Home</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="/ERC-website-2021/blog">Blog</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#events">Events</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#ercteamdet">Team Details</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#contact">Contact Us</a></li></ul></nav></div><div class="jsx-906dc5424778ca56 content"><section><h1 class="jsx-891cd4241e1082f5 title">Events</h1><ul class="jsx-891cd4241e1082f5 list"><a class="jsx-891cd4241e1082f5" href="/ERC-website-2021/events/test-event-2"><li class="jsx-891cd4241e1082f5"><div class="jsx-891cd4241e1082f5 hero_image"><img src="/ERC-website-2021/static/screen-shot-2021-11-28-at-14-20-01.png" alt="/ERC-website-2021/static/screen-shot-2021-11-28-at-14-20-01.png" class="jsx-891cd4241e1082f5"/></div><div class="jsx-891cd4241e1082f5 blog__info"><h2 class="jsx-891cd4241e1082f5">Test event 2</h2><h3 class="jsx-891cd4241e1082f5"> <!-- -->Nov 08 2021</h3><p class="jsx-891cd4241e1082f5"><p>Test content of test event 2</p></p></div></li></a><a class="jsx-891cd4241e1082f5" href="/ERC-website-2021/events/test-event"><li class="jsx-891cd4241e1082f5"><div class="jsx-891cd4241e1082f5 hero_image"><img src="" alt="" class="jsx-891cd4241e1082f5"/></div><div class="jsx-891cd4241e1082f5 blog__info"><h2 class="jsx-891cd4241e1082f5">Test Event</h2><h3 class="jsx-891cd4241e1082f5"> <!-- -->Nov 18 2021</h3><p class="jsx-891cd4241e1082f5"><p>Test content</p></p></div></li></a></ul></section></div><div class="contact-section" id="contact"><div class="contact-details"><p id="contact-text" class="hover-difference">Get directly in touch with us:</p><div class="contact-icons hover-difference"><a href="https://www.facebook.com/erciitb"><i class="fab fa-facebook-square"></i></a><a href="https://www.instagram.com/erc.iitb/"><i class="fab fa-instagram"></i></a><a href="mailto:erciitbombay@gmail.com"><i class="far fa-envelope"></i></a></div><a href="mailto:elecrobo.club@iitb.ac.in" id="contact-mail" class="hover-difference">elecrobo.club@iitb.ac.in</a><button class="contact-form-button">Message us</button></div><div class="contact-form-map-mix-outer"><div class="contact-form-map-mix-inner"><div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.6786880670256!2d72.9138437580561!3d19.13376545835707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7f5e4ac7efd%3A0xd9d02f29b4617fb4!2sTinkerers&#x27;%20Laboratory!5e0!3m2!1sen!2sin!4v1597995010048!5m2!1sen!2sin" frameBorder="0" style="border:0" aria-hidden="false" tabindex="0"></iframe></div><div class="contact-form"><form action="./form-submit.php" method="POST" id="validated-form"><div class="contact-form-element"><label for="name">Name</label><input type="text" name="name" id="contact-user-name" required=""/></div><div class="contact-form-element"><label for="email">Email</label><input type="text" name="email" id="contact-user-email" required=""/></div><div class="contact-form-element"><label for="message">Message</label><textarea name="message" maxlength="10000" cols="30" rows="4" id="contact-user-message"></textarea></div></form></div></div></div></div></section></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"allBlogs":[{"frontmatter":{"title":"Test event 2","date":"2021-11-08T18:30:00.000Z","hero_image":"/ERC-website-2021/static/screen-shot-2021-11-28-at-14-20-01.png"},"markdownBody":"Test content of test event 2","slug":"test-event-2"},{"frontmatter":{"title":"Test Event","date":"2021-11-18T18:30:00.000Z","hero_image":""},"markdownBody":"\nTest content","slug":"test-event"}],"title":"ERC: Events","description":"Electronics and Robotics Club, IIT Bombay's Events"},"__N_SSG":true},"page":"/events","query":{},"buildId":"5QJC4znxUt28OyN5o0qMk","assetPrefix":"/ERC-website-2021","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+	 <!-- Introduction and About Us Section CSS -->
+    <link rel="stylesheet" href="./static/about-us/about-us-main.css">
+    <link rel="stylesheet" href="./static/wiki/wiki.css">
+    <link rel="stylesheet" href="./static/general/scroll-bar/scroll-bar.css">
+    <!-- Bootstrap 4  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--Google Fonts-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;900&family=Poppins:wght@700&family=Ubuntu&display=swap"
+        rel="stylesheet">
+    <!--Font Awesome 5-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+
+  
+  <!-- Events section CSS  -->
+  <link rel='stylesheet' type="text/css" href="./static/events-and-projects/css/main_events_mobile.css">
+  <link rel='stylesheet' type='text/css' href='./static/events-and-projects/css/main_events.css'>
+	
+</head>
+<body>
+
+      <!-- About Us Section -->
+<!--     <div class="dark about-us-container"> -->
+        <div class="navigation-wrap navdark start-header start-style">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="navbar navbar-expand-md mobilenav ">
+
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="fas fa-bars"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-right: 4%;border: 5%">
+                            <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                <li class="nav-item pl-4 pl-md-0 ml-1 ml-md-4">
+                                    <a class="nav-link " href="index.html" style="font-size: medium;font-weight: bold;padding-bottom:20px; ">Home</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-1 ml-md-4">
+                                    <a class="nav-link" href="blog.html" style="font-size: medium; font-weight: bold;padding-bottom:20px">Blogs</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-1 ml-md-4">
+                                    <a class="nav-link" href="events.html" style="font-size: medium;font-weight: bold; padding-bottom:20px">Events</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-1 ml-md-4">
+                                    <a class="nav-link" href="projects.html" style="font-size: medium;font-weight: bold; padding-bottom:20px">Projects</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-1 ml-md-4">
+                                    <a class="nav-link" href="legacy.html" style="font-size: medium; border-right:10% ;padding-right:10%;">Legacy</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-1 ml-md-4">
+                                    <a class="nav-link" href="index.html#ercteamdet" style="font-size: medium;font-weight: bold;padding-bottom:20px ">Team Details</a>
+                                </li>
+                                <li class="nav-item pl-4 pl-md-0 ml-1 ml-md-4">
+                                    <a class="nav-link" href="index.html#contact" style="font-size: medium; font-weight: bold;border-right:10% ;padding-right:10%;padding-bottom:20px">Contact Us</a>
+                                </li>
+				    <br>
+				    
+        
+                            </ul>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+  <!-- Events Section  -->
+  <div class="event-container" id="events">
+    <div class="main-events hover-enlarge hover-difference" style="padding-top:50px;">
+        <div class="background"></div>
+        <div class="title">Main Events</div>
+    </div>
+    <div class="event-border">
+        <div class="desktop-card" id= "XLR8">
+<!--                 <a class="button" href="https://forms.gle/54pLdCTRa8F2bBjt5" data-mode="popup" data-size="70" target="_blank"> -->
+<!--                     <div class="reg-button"><img src="./static/general/register-button/reg-button.png" alt="Register NOW!"></div> -->
+<!--                 </a> -->
+            <h2>XLR8 <i class="fas fa-arrow-right"></i>
+            </h2>
+            <p class='vertical'>A race against time
+            </p>
+            <p class='detail'>You are now a member of a team of four. Your mission, should you choose to accept it,
+                is to design a remote-controlled bot from scratch. Using your phone, you should be able to maneuver
+                the bot safely through a track filled with a diverse
+                set of obstacles. Be warned; The clock is ticking!
+            </p>
+            <div class="pic" style="background-image: url('./static/events-and-projects/media/events/xlr8.gif');">
+            </div>
+            <div class="hide-overflow">
+                <ul class='card-dots'>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                </ul>
+                <button>
+                </button>
+                <button class='overlay'></button>
+            </div> 
+        </div>
+        <div class="desktop-card desktop-card2" id="Arduino">
+            <h2 class="large-head">Arduino Bootcamp <i class="fas fa-arrow-right"></i>
+            </h2>
+            <p class='vertical'>Ar-do-we-know? </p>
+            <p class='detail'> Arduino Bootcamp gets you started with Arduino programming. Have no
+                prior programming experience? No worries, we’ll start from scratch and show you the power of Arduino
+                with hands-on experience in the session.With this kickstart, and some practice, you’ll be
+		creating your own Arduino projects in no time!
+	<br>
+                
+            </p>
+            <div class="pic"
+            style="background-image: url('./static/events-and-projects/media/events/arduino.jpg');"></div>
+            <div class="hide-overflow">
+                <ul class='card-dots'>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                </ul>
+                <button>
+                </button>
+                <button class='overlay'></button>
+            </div>
+        </div>
+        <div class="desktop-card" id="ROS">
+            <!-- <a class="button" href="https://docs.google.com/forms/d/1YHzXPt1-Lbqu-Vp5US1qIn1kC2xgn2YjsVCnwUxqag0/viewform?edit_requested=true" data-mode="popup" data-size="70" target="_blank">
+                <div class="reg-button"><img src="./static/general/register-button/reg-button.png" alt="Register NOW!"></div>
+            </a> -->
+            <h2 class="large-head">A fROSty Winter<i class="fas fa-arrow-right"></i>
+            </h2>
+            <p class='vertical'> ROS Workshop </p>
+            <p class='detail'> Are you ready to help Sherlock? Join us for 'fROSty Winter', a 4-week workshop on 'Robot Operating System (ROS)', which is used in most state-of-the-art robots around the world today. The workshop kicks off on 1st December.
+                
+            </p>
+            <div class="pic"
+            style="background-image: url('./static/events-and-projects/media/events/fROSty.jpeg');"></div>
+            <div class="hide-overflow">
+                <ul class='card-dots'>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                </ul>
+                <button>
+                </button>
+                <button class='overlay'></button>
+            </div>
+        </div>
+        
+        <div class="desktop-card desktop-card2" id="LineFollower">
+            <h2 class="large-head">Line Follower <i class="fas fa-arrow-right"></i>
+            </h2>
+            <p class='vertical'>Dare to Deviate
+            </p>
+            <p class='detail'> Remember that awesome bot you made during XLR8? Now it's time to teach your bot to
+                think! Modified mission- build a bot that can detect and follow a white path on a black
+                backdrop using the Arduino microcontroller. This will introduce
+                you to microcontrollers along with a flavor of control systems.
+            </p>
+            <div class="pic" style="background-image: url('./static/events-and-projects/media/events/line.gif');">
+            </div>
+            <div class="hide-overflow">
+                <ul class='card-dots'>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                </ul>
+            <button>
+            </button>
+            <button class='overlay'></button>
+            </div>
+        </div>
+        <div class="desktop-card" id="getelec">
+            <h2 class="large-head">Get Electrified!! <i class="fas fa-arrow-right"></i>
+            </h2>
+            <p class='vertical'>as simple as 01,10,11
+            </p>
+            <p class='detail'>Throughout the year, we conduct several Get Electrified sessions where we will give
+                you an introduction to analog and digital electronics. We will implement circuits and see actual
+                waveforms and learn their amazing applications. Finally,
+                using all the things discussed, you shall be building a cool project!
+
+            </p>
+            <div class="pic"
+                style="background-image: url('./static/events-and-projects/media/events/electrified.jpg');"></div>
+                <div class="hide-overflow">
+                    <ul class='card-dots'>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    </ul>
+                                <button>
+            </button>
+            <button class='overlay'></button>
+        </div>
+        </div>
+        <div class='mobile-events-container'>
+            <div class="event-slideshow-container" id="event-slideshow-container">
+                <div class="eventSlides show fade" onclick="currenteventSlide(0)">
+                    <div class="card text-left" style="overflow:hidden">
+                        <div class="card-img-top"
+                            style="background-image: url('./static/events-and-projects/media/events/xlr8.gif');">
+                        </div>
+                        <div class="card-body">
+                            <h5>XLR8</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">A race against time
+                            </h6>
+                            <p class="card-text hide">You are now a member of a team of four. Your mission, should
+                                you choose to accept it, is to design a remote-controlled bot from scratch. Using
+                                your phone, you should be able to maneuver the bot safely through a track filled
+                                with a diverse set of obstacles. Be warned; The clock is ticking!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="eventSlides show fade" onclick="currenteventSlide(1)">
+                    <div class="card text-left" style="overflow:hidden">
+                        <div class="card-img-top"
+                            style="background-image: url('./static/events-and-projects/media/events/arduino.jpg');">
+                        </div>
+                        <div class="card-body">
+                            <h5>Intro to Arduino </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Ar-do-we-know?</h6>
+                            <p class="card-text hide">We organize the Arduino Bootcamp to get you started with
+                                programming in Arduino. Have no prior programming experience? No worries, we’ll
+                                start from scratch and show you the power of Arduino with hands-on experience in the
+                                session. Believe us, with this kickstart, and some practice of your own, you’ll be
+                                creating your own Arduino projects in no time!
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="eventSlides show fade" onclick="currenteventSlide(2)">
+                    <div class="card text-left" style="overflow:hidden">
+                        <div class="card-img-top"
+                            style="background-image: url('./static/events-and-projects/media/events/line.gif');">
+                        </div>
+                        <div class="card-body">
+                            <h5>Line Follower</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Dare to Deviate
+                            </h6>
+                            <p class="card-text hide">Remember that awesome bot you made during XLR8? Now it's time
+                                to teach your bot to think! Modified mission- build a bot that can detect and follow
+                                a white path on a black backdrop using the Arduino microcontroller. This
+                                will introduce you to microcontrollers along with a flavor of control systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="eventSlides show fade" onclick="currenteventSlide(3)">
+                    <div class="card text-left" style="overflow:hidden">
+                        <div class="card-img-top"
+                            style="background-image: url('./static/events-and-projects/media/events/electrified.jpg');">
+                        </div>
+                        <div class="card-body">
+                            <h5>Get Electrified!!</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">as simple as 01,10,11
+                            </h6>
+                            <p class="card-text hide">Throughout the year, we conduct several Get Electrified
+                                sessions where we will give you an introduction to analog and digital electronics.
+                                We will implement circuits and see actual waveforms and learn about their amazing
+                                applications.
+                                Finally, using all the things discussed, you shall be building a cool project!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The eventDots/circles -->
+            <div class="eventDot-box text-center">
+                <span class="eventDot" onclick="currenteventSlide(0)"></span>
+                <span class="eventDot" onclick="currenteventSlide(1)"></span>
+                <span class="eventDot" onclick="currenteventSlide(2)"></span>
+                <span class="eventDot" onclick="currenteventSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+	<script>
+        // Get the clickable box element
+        const clickableBox = document.getElementById('XLR8');
+
+        // Function to handle the click event
+        function handleClick() {
+            // Redirect to the target page (change 'target-page.html' to the actual target page)
+            window.location.href = 'https://erciitb.github.io/calendar.html';
+        }
+
+        // Add event listener for mouse clicks and touch events
+        clickableBox.addEventListener('click', handleClick);
+        clickableBox.addEventListener('touchstart', handleClick);
+    </script>
+
+<!--   <script>
+  document.getElementById("XLR8").onclick = function() {
+    window.location.href = "XLR8.html";
+  };
+</script> -->
+  <script>
+  document.getElementById("Arduino").onclick = function() {
+    window.location.href = "ArduinoBootCamp.html";
+  };
+</script>
+<script>
+  document.getElementById("getelec").onclick = function() {
+    window.location.href = "another-page.html";
+  };
+</script>
+<script>
+  document.getElementById("ROS").onclick = function() {
+    window.location.href = "another-page.html";
+  };
+</script>
+(function() { 
+    var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; 
+    if(!gi.call(d,id)){ 
+        js=ce.call(d,"script"); 
+        js.id=id; js.src=b+"embed.js"; 
+        q=gt.call(d,"script")[0]; 
+        q.parentNode.insertBefore(js,q) 
+        } 
+    })() 
+</script>
+<!-- 	for calendar -->
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<!-- for the cursor -->
+<script src="./static/general/cursor/cursor.js"></script>
+<!-- javascript libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- for the navbar animation, scrolling bot, tilting logo and the particles  -->
+<script src="./static/about-us/vanilla-tilt.min.js"></script>
+<script src="./static/about-us/particles.min.js"></script>
+<script src="./static/about-us/script.js"></script>
+<script src="./static/general/scroll-bar/scroll-bar.js"></script>
+<!-- for the events section -->
+<script src="./static/events-and-projects/js/main_events_mobile.js"></script>
+<!-- for the projects section -->
+<script src="./static/events-and-projects/js/main_projects_mobile.js "></script>
+<!-- for the contact form -->
+<script src="./static/contact-files/form.js"></script>
+<!-- for wiki -->
+<script src="./static/wiki/wiki.js"></script>
+<!-- for Loader  -->
+<script src="./static/general/loader/loader.js"></script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+var button = document.querySelector(".dropdown-button");
+var content = document.querySelector("#calendar-slider");
+
+button.addEventListener("click", function () {
+  content.style.display = content.style.display === "inline-block" ? "none" : "block";
+});
+});
+</script>
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,554 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>XLR8</title>
+  <!-- Include Bootstrap CSS via CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Add these lines in the head section of your HTML -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Include your custom CSS file -->
+  <link rel="stylesheet" href="./static/team-files/styles.css">
+
+  /* styles.css */
+
+/* Custom styling for the embedded videos */
+.embed-responsive-16by9 {
+  max-width: 100%;
+  margin: 0 auto; /* Center the video horizontally */
+}
+
+/* Optional: Add some spacing between videos */
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+  .btn-fullscreen {
+  width: 100%;
+}
+
+  <style>
+    /* Add these CSS rules to your styles.css file */
+/* Ensure images within the gallery have equal dimensions and some margin */
+/* Add these CSS rules to your styles.css file */
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Maintain a 1:1 aspect ratio (square) */
+  overflow: hidden;
+}
+
+.img-wrapper img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Preserve aspect ratio and fill the container */
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  margin: 10px; /* Adjust the margin as needed for spacing */
+}
+
+/* Override Bootstrap columns for small screens to display 2 images per row */
+@media (max-width: 767px) {
+  .col-sm-6 {
+    flex: 0 0 50%; /* Make each column take 50% width */
+    max-width: 50%;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar and other content will go here -->
+  
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+      <div class="nav-container">
+        <a class="navbar-brand" href="#">
+           <h2 style="font-weight:bold;">XLR8!!!! A RACING EVENT THAT BRINGS OUT YOUR INNOVATION.....</h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+<!--             <li class="nav-item">
+              <a class="nav-link" href="#registration">Registration</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#events">Events Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#movies">After Movies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials">Testimonials</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+<!-- Registration Form Section -->
+<!-- <section id="registration" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Registration Form</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form class="registration-form">
+          <div class="form-group">
+            <label for="teamname">Team name(Try to be creative):</label>
+            <input type="text" id="teamname" class="form-control" placeholder="Enter your team name" required>
+          </div>
+          <div class="form-group">
+            <label for="participant1">Name of the Participant 1(Team Leader):</label>
+            <input type="text" id="participant1" class="form-control" placeholder="Enter name" required>
+          </div>
+          <div class="form-group">
+            <label for="mobno1">Contact number of Participant 1:</label>
+            <input type="number" id="mobno1" class="form-control" placeholder="Enter contact number" required>
+          </div>
+          <div class="form-group">
+            <label for="team_size">No. of team members(It is advisable to get into a team of 4)</label>
+            <input type="number" id="team_size" class="form-control" placeholder="Confirm your password" required>
+          </div>
+          <div class="form-group">
+            <label for="rollno1">Roll number of Participant 1:</label>
+            <input type="number" id="rollno1" class="form-control" required>
+          </div>
+
+          <div class="form-group">
+            <label for="participant2">Name of the Participant 2(Team Leader):</label>
+            <input type="text" id="participant2" class="form-control" placeholder="Enter name" required>
+          </div>
+          <div class="form-group">
+            <label for="mobno2">Contact number of Participant 2:</label>
+            <input type="number" id="mobno2" class="form-control" placeholder="Enter contact number" required>
+          </div>
+          <div class="form-group">
+            <label for="rollno2">Roll number of Participant 2:</label>
+            <input type="number" id="rollno2" class="form-control" placeholder="Enter roll number" required>
+          </div>
+
+          <div class="form-group">
+            <label for="participant3">Name of the Participant 3(Team Leader):</label>
+            <input type="text" id="participant3" class="form-control" placeholder="Enter name" required>
+          </div>
+          <div class="form-group">
+            <label for="mobno3">Contact number of Participant 3:</label>
+            <input type="number" id="mobno3" class="form-control" placeholder="Enter contact number" required>
+          </div>
+          <div class="form-group">
+            <label for="rollno3">Roll number of Participant 3:</label>
+            <input type="number" id="rollno3" class="form-control" placeholder="Enter roll number" required>
+          </div>
+
+          <div class="form-group">
+            <label for="participant4">Name of the Participant 4(Team Leader):</label>
+            <input type="text" id="participant4" class="form-control" placeholder="Enter name" required>
+          </div>
+          <div class="form-group">
+            <label for="mobno4">Contact number of Participant 4:</label>
+            <input type="number" id="mobno4" class="form-control" placeholder="Enter contact number" required>
+          </div>
+          <div class="form-group">
+            <label for="rollno4">Roll number of Participant 4:</label>
+            <input type="number" id="rollno4" class="form-control" placeholder="Enter roll number" required>
+          </div>
+
+
+         
+          <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary btn-lg">Register</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+
+<!-- Events Gallery Section -->
+<section id="events" class="py-5">
+  <div class="container">
+    <h3 class="text-center mb-4">Events Gallery</h3>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 185633.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 190445.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 190733.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 190919.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 191727.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 191625.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 190415.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 191703.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 191643.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 191745.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 190846.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 191420.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 191444.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 190709.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 190532.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/Screenshot 2023-08-07 185933.png" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/IMG20230126095647.jpg" class="img-thumbnail">
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-6 mb-4">
+        <img src="./static/team-files/media/New_images/IMG_3979.jpg" class="img-thumbnail">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!--         <div class="lightbox" id="lightbox-1">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=512"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-2">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=513"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-3">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=514"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-4">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=515"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-5">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=516"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-6">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=517"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-7">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=518"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-8">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=519"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-9">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=520"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-10">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=521"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-11">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=522"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-12">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=523"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-13">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=524"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-14">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=525"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-15">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=526"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-16">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=527"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-17">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=528"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div>
+        <div class="lightbox" id="lightbox-18">
+          <div class="content"><img src="https://picsum.photos/1920/1080/?image=529"/>
+            <div class="title"></div><a class="close" href="#gallery"></a>
+          </div>
+        </div> -->
+          <!-- Add more photo columns -->
+<!--          </div> -->
+<!--       </div> -->
+    </div>
+  </div>
+</section>
+
+
+
+<!-- After Movies Section -->
+<section id="movies" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-4">After Movies</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/4Y6ykZW8Fzo"></iframe>
+        </div>
+        <button class="btn btn-secondary btn-block mt-2" onclick="toggleFullScreen(this)">Toggle Full Screen</button>
+      </div>
+      <!-- Add more columns for more videos -->
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Testimonials</h2>
+  <figure class="snip1574">
+    <img src="./static/team-files/media/New_images/Untitled (1).png" />
+    <figcaption>
+      <blockquote>
+        <p>It was one hell of a blast participating in XLR8</p>
+      </blockquote>
+<!--       <h3>Sue Shei</h3> -->
+      <h5>Team Hexalot</h5>
+    </figcaption>
+  </figure>
+  <figure class="snip1574"><img src="./static/team-files/media/New_images/Untitled (2).png" />
+    <figcaption>
+      <blockquote>
+        <p>We began like kids, marveling playing with the stuff in the kits you provided</p>
+      </blockquote>
+<!--       <h3>Will Barrow</h3> -->
+      <h5>Team Velociraptors </h5>
+    </figcaption>
+  </figure>
+  <figure class="snip1574"><img src="./static/team-files/media/New_images/Untitled (3).png" />
+    <figcaption>
+      <blockquote>
+        <p>The experience was competitive, frustrating(sometimes), educational and most importantly fun! </p>
+      </blockquote>
+<!--       <h3>Indigo Violet</h3> -->
+      <h5>Team Osiris </h5>
+    </figcaption>
+  </figure>
+    <figure class="snip1574"><img src="./static/team-files/media/New_images/Untitled (4).png" alt="profile-sample6" />
+    <figcaption>
+      <blockquote>
+        <p>Sleepless nights and days full of fun.And learning that we all got at the last, can never be threaded to words </p>
+      </blockquote>
+<!--       <h3>Indigo Violet</h3> -->
+      <h5>Team Tech & Furious5</h5>
+    </figcaption>
+  </figure>
+    <figure class="snip1574"><img src="./static/team-files/media/New_images/Untitled (5).png" alt="profile-sample6" />
+    <figcaption>
+      <blockquote>
+        <p>We screamed very loudly after the finish,everyone looked at  us. Yes, that was our 2 weeks of hard work,sleepless nights. </p>
+      </blockquote>
+<!--       <h3>Indigo Violet</h3> -->
+      <h5>Team Rouge 4 </h5>
+    </figcaption>
+  </figure>
+    <figure class="snip1574"><img src="./static/team-files/media/New_images/Untitled (6).png" />
+    <figcaption>
+      <blockquote>
+        <p>We started brainstorming and came up with many design ideas. We were overflowing with excitement</p>
+      </blockquote>
+<!--       <h3>Indigo Violet</h3> -->
+      <h5>Team Bombay Bullies </h5>
+    </figcaption>
+  </figure>
+    <figure class="snip1574"><img src="./static/team-files/media/New_images/WhatsApp Image 2023-08-10 at 1.30.19 PM.jpeg" alt="profile-sample6" />
+    <figcaption>
+      <blockquote>
+        <p>It was an awesome journey..Whole nights in TL.. I swear it was the most beautiful experience and will last forever in our whole college life</p>
+      </blockquote>
+<!--       <h3>Indigo Violet</h3> -->
+      <h5>Team 4ARMS</h5>
+    </figcaption>
+  </figure>
+    <figure class="snip1574"><img src="./static/team-files/media/New_images/Untitled.png" alt="profile-sample6" />
+    <figcaption>
+      <blockquote>
+        <p>The experience was competitive, frustrating(sometimes), educational and most importantly fun! </p>
+      </blockquote>
+<!--       <h3>Indigo Violet</h3> -->
+      <h5>Team Osiris </h5>
+    </figcaption>
+  </figure>
+</div>
+</section>
+
+
+
+
+  
+  <!-- Include Bootstrap JavaScript via CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- Add this script just before the closing </body> tag -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.3.0/simple-lightbox.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    new SimpleLightbox('.album a');
+  });
+</script>
+
+  <!-- <script>
+  const testimonialCards = document.querySelectorAll(".testimonial-card");
+
+  testimonialCards.forEach((card) => {
+    card.addEventListener("mouseover", () => {
+      testimonialCards.forEach((c) => (c.style.transform = "translateX(-50%)"));
+      card.style.transform = "translateX(0)";
+    });
+
+    card.addEventListener("mouseleave", () => {
+      testimonialCards.forEach((c) => (c.style.transform = "translateX(0)"));
+    });
+  });
+
+
+  </script> -->
+
+  <!-- Add this script just before the closing </body> tag -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const yearLinks = document.querySelectorAll(".year-navbar .nav-link");
+    const imageSlider = document.querySelector(".image-slider");
+
+    // Function to handle year change
+    function setActiveYear(year) {
+      yearLinks.forEach(link => {
+        link.classList.remove("active");
+      });
+
+      const activeLink = document.querySelector(`[data-year="${year}"]`);
+      activeLink.classList.add("active");
+
+      // Code to fetch images for the selected year from the backend or add images manually below
+      // Example: imageSlider.innerHTML = `<img src="path-to-your-photo1.jpg"> <img src="path-to-your-photo2.jpg"> ...`;
+    }
+
+    // Add event listeners to year links
+    yearLinks.forEach(link => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const year = this.getAttribute("data-year");
+        setActiveYear(year);
+      });
+    });
+
+    // Set the initial active year
+    setActiveYear("2023");
+
+    // Image slider functionality with arrow keys
+    let translateValue = 0;
+    document.addEventListener("keydown", function (event) {
+      if (event.keyCode === 37) {
+        // Left arrow key
+        translateValue += 400; // Adjust the value based on image width and desired scroll distance
+      } else if (event.keyCode === 39) {
+        // Right arrow key
+        translateValue -= 400;
+      }
+
+      // Ensure the slider stays within bounds
+      translateValue = Math.max(translateValue, -imageSlider.scrollWidth + imageSlider.parentElement.offsetWidth);
+      translateValue = Math.min(translateValue, 0);
+
+      imageSlider.style.transform = `translateX(${translateValue}px)`;
+    });
+  });
+</script>
+
+
+<script>
+$(".hover").mouseleave(
+  function () {
+    $(this).removeClass("hover");
+  }
+);
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  // JavaScript to enable full-screen mode
+function toggleFullScreen(element) {
+  if (!document.fullscreenElement) {
+    element.parentNode.requestFullscreen().catch(err => {
+      console.log(`Error attempting to enable full-screen: ${err.message}`);
+    });
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+
+
+
+</script>
+
+</body>
+</html>
