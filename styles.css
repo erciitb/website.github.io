@@ -1,0 +1,282 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    /*background-image: url('C:\\Users\\HP\\Desktop\\erc web\\back.png');  Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: right;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navbar a:hover {
+    color: blue;
+    border-bottom: 3px solid blue;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    display: none;
+}
+
+.container1 {
+    display: flex;
+    flex: 1;
+}
+
+.left-images {
+    width: 30%;
+    position: fixed;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.fixed-image1 {
+    margin-bottom: 20px;
+    width: 45%;
+    height: auto;
+}
+
+.fixed-image2 {
+    margin-bottom: 20px;
+    width: 120%;
+    height: auto;
+}
+
+.fixed-image3 {
+    margin-bottom: 30px;
+    width: 110%;
+    height: auto;
+}
+
+.left-images .fixed-image1:hover {
+    transform: scale(1.05);
+}
+
+
+
+.container {
+    position: fixed;
+    width: 100%;
+    height: 80%;
+    max-width: 6000px;
+    max-height: 6000px;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    transform-style: preserve-3d;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-right: 60px;
+}
+
+.cards {
+    position: relative; /* Changed from fixed to relative */
+    height: 500px;
+    width: 450px;
+    margin-bottom: 20px;
+    perspective: 500px;
+    transform-style: preserve-3d;
+    left: 20%; /* Shift the cards to the right */
+}
+
+.cards label {
+    position: absolute;
+    width: 500px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: transform 0.55s ease;
+}
+
+.cards .card {
+    position: relative;
+    height: 100%;
+    background-color: #323444;
+    border-radius: 10px;
+    padding: 25px 30px;
+}
+
+.cards .image {
+    display: flex;
+    justify-content: center;
+}
+
+.cards .image img {
+    border-radius: 5px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.5);
+    margin-top: 15px;
+    width: 95%;
+    height: 250px;
+    object-fit: cover;
+    transition: all 0.7s;
+}
+
+.cards .image img:hover {
+    transform: scale(1.05);
+}
+
+.card .infos {
+    display: block;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.card .infos span {
+    display: block;
+}
+
+.infos.name {
+    font-size: 30px;
+    color: var(--current-color1);
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    padding-left: 25%;
+    transition: all 0.6s ease;
+}
+
+.card .btn-detail {
+    width: 100%;
+    height: 60px;
+    margin: 35px auto;
+    border-radius: 5px;
+    background-color: var(--current-color1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 10px;
+    font-weight: 700;
+    transition: all 0.7s ease;
+}
+
+.card .btn-detail:hover {
+    transform: scale(1.09);
+}
+
+.card .action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.action i {
+    font-size: 24px;
+    transition: all 0.7s ease;
+    color: var(--current-color2);
+}
+
+.action:hover i {
+    transform: scale(1.3);
+}
+
+#s1:checked~.cards #slide4,
+#s2:checked~.cards #slide5,
+#s3:checked~.cards #slide1,
+#s4:checked~.cards #slide2,
+#s5:checked~.cards #slide3 {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+    transform: translate3d(-70%, 0, -220px);
+    --current-color1: #eceaed;
+    --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide5,
+#s2:checked~.cards #slide1,
+#s3:checked~.cards #slide2,
+#s4:checked~.cards #slide3,
+#s5:checked~.cards #slide4 {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+    transform: translate3d(-35%, 0, -120px);
+    --current-color1: #eceaed;
+    --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide1,
+#s2:checked~.cards #slide2,
+#s3:checked~.cards #slide3,
+#s4:checked~.cards #slide4,
+#s5:checked~.cards #slide5 {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    transform: translate3d(0, 0, 0);
+    --current-color1: #fad00c;
+    --current-color2: #eceaed;
+}
+
+#s1:checked~.cards #slide2,
+#s2:checked~.cards #slide3,
+#s3:checked~.cards #slide4,
+#s4:checked~.cards #slide5,
+#s5:checked~.cards #slide1 {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+    transform: translate3d(35%, 0, -120px);
+    --current-color1: #eceaed;
+    --current-color2: #404457;
+}
+
+#s1:checked~.cards #slide3,
+#s2:checked~.cards #slide4,
+#s3:checked~.cards #slide5,
+#s4:checked~.cards #slide1,
+#s5:checked~.cards #slide2 {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.45);
+    transform: translate3d(70%, 0, -220px);
+    --current-color1: #eceaed;
+    --current-color2: #404457;
+}
+
+/* Add CSS for the buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: 22px;
+    margin-right: -170px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.next {
+    right: 340px;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgb(255, 255, 255);
+}
