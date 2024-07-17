@@ -1,0 +1,233 @@
+<!DOCTYPE html><html><head><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1" class="jsx-5c406e1c43a4c1e0"/><meta charSet="utf-8" class="jsx-5c406e1c43a4c1e0"/><title class="jsx-5c406e1c43a4c1e0">ERC: Controls Theory</title><meta name="Description" class="jsx-5c406e1c43a4c1e0"/><meta name="next-head-count" content="4"/><link rel="preload" href="/ERC-website-2021/_next/static/css/1e14cc6db1e7a797.css" as="style"/><link rel="stylesheet" href="/ERC-website-2021/_next/static/css/1e14cc6db1e7a797.css" data-n-g=""/><link rel="preload" href="/ERC-website-2021/_next/static/css/b4c3d7a1b2745c28.css" as="style"/><link rel="stylesheet" href="/ERC-website-2021/_next/static/css/b4c3d7a1b2745c28.css" data-n-p=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/ERC-website-2021/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/ERC-website-2021/_next/static/chunks/webpack-fa43d853eceb8330.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/framework-91d7f78b5b4003c8.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/main-7f98c67519643b43.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/pages/_app-8cb99849f9af73f7.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/147-3e7b67f404388648.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/157-8d95c7b28c8fe8df.js" defer=""></script><script src="/ERC-website-2021/_next/static/chunks/pages/blog/%5Bslug%5D-771aa725b6e9cc01.js" defer=""></script><script src="/ERC-website-2021/_next/static/5QJC4znxUt28OyN5o0qMk/_buildManifest.js" defer=""></script><script src="/ERC-website-2021/_next/static/5QJC4znxUt28OyN5o0qMk/_ssgManifest.js" defer=""></script><script src="/ERC-website-2021/_next/static/5QJC4znxUt28OyN5o0qMk/_middlewareManifest.js" defer=""></script><style id="__jsx-5c406e1c43a4c1e0">@import url("https://fonts.googleapis.com/css?family=Work+Sans&display=swap");
+* {box-sizing:inherit}
+html {box-sizing:border-box;
+overflow-y:scroll}
+body {margin:0;
+font-family:"Work Sans", "Helvetica Neue", Helvetica, sans-serif;
+overflow-x:hidden;
+color:#000;
+font-size:16px;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale}
+a {-webkit-text-decoration:none;
+text-decoration:none;
+color:inherit;
+-webkit-transition:opacity 0.2s ease;
+transition:opacity 0.2s ease}
+a:hover {-webkit-transition:opacity 0.2s ease;
+transition:opacity 0.2s ease;
+opacity:0.5;
+text-decoration-color:inherit}
+ul {list-style:none;
+margin:0;
+padding-bottom:0;
+padding-left:0;
+padding-right:0;
+padding-top:0;
+list-style-position:outside;
+list-style-image:none}
+ol {margin:0;
+padding-bottom:0;
+padding-left:0;
+padding-right:0;
+padding-top:0;
+list-style-position:outside;
+list-style-image:none}
+ul, ol, p {margin-bottom:1.45rem}
+img {max-width:100%}
+img, figure, table, fieldset {margin-left:0;
+margin-right:0;
+margin-top:0;
+padding-bottom:0;
+padding-left:0;
+padding-right:0;
+padding-top:0;
+margin-bottom:1.45rem}
+pre {margin-left:0;
+margin-right:0;
+margin-top:0;
+margin-bottom:1.45rem;
+font-size:0.85rem;
+line-height:1.42;
+background:hsla(0, 0%, 0%, 0.04);
+border-radius:3px;
+overflow:auto;
+word-wrap:normal;
+padding:1.45rem}
+table {font-size:1rem;
+line-height:1.45rem;
+border-collapse:collapse;
+width:100%}
+blockquote {margin-left:1.45rem;
+margin-right:1.45rem;
+margin-top:0;
+padding-bottom:0;
+padding-left:0;
+padding-right:0;
+padding-top:0;
+margin-bottom:1.45rem}
+strong {font-weight:bold}
+li {margin-bottom:calc(1.45rem / 2)}
+ol li {padding-left:0}
+ul li {padding-left:0}
+li >ol {margin-left:1.45rem;
+margin-bottom:calc(1.45rem / 2);
+margin-top:calc(1.45rem / 2)}
+li >ul {margin-left:1.45rem;
+margin-bottom:calc(1.45rem / 2);
+margin-top:calc(1.45rem / 2)}
+blockquote *:last-child {margin-bottom:0}
+li *:last-child {margin-bottom:0}
+p *:last-child {margin-bottom:0}
+li >p {margin-bottom:calc(1.45rem / 2)}
+code {font-size:0.85rem;
+line-height:1.45rem}
+h1, h2, h3, h4, h5, h6, p {font-family:"Work Sans", "Helvetica Neue", Helvetica, sans-serif;
+margin-left:0;
+margin-right:0;
+margin-top:0;
+padding-bottom:0;
+padding-left:0;
+padding-right:0;
+padding-top:0;
+margin-bottom:1.45rem;
+color:inherit;
+text-rendering:optimizeLegibility}
+h1, h2 {font-weight:500}
+h1 {font-size:2rem;
+letter-spacing:-1px;
+line-height:1.1875}
+h2 {font-size:1.7rem;
+letter-spacing:-0.75px;
+line-height:1.2}
+h3 {font-size:1.2rem;
+letter-spacing:-0.5px;
+line-height:1.1875;
+color:#ffffff;
+font-weight:normal}
+p {font-size:1.2rem;
+letter-spacing:-0.5px;
+line-height:1.5;
+color:#ffffff}
+@media (min-width:1280px) {h1 {font-size:2rem;
+letter-spacing:-1px;
+line-height:1.1875}
+h2 {font-size:1.5rem;
+letter-spacing:-0.75px;
+line-height:1.1667}
+h3 {font-size:1rem;
+letter-spacing:-0.5px;
+line-height:1.1875;
+color:#ffffff;
+font-weight:normal}
+p {line-height:1.4375}}</style><style id="__jsx-fad75cd775d05681">.blog.jsx-fad75cd775d05681 {background-color:#1D252E;
+color:#ffffff;
+margin-bottom:0}
+.blog.jsx-fad75cd775d05681 h1.jsx-fad75cd775d05681 {margin-bottom:0.7rem}
+.blog__hero.jsx-fad75cd775d05681 {min-height:300px;
+height:60vh;
+width:100%;
+margin:0;
+overflow:hidden}
+.blog__hero.jsx-fad75cd775d05681 img.jsx-fad75cd775d05681 {margin-bottom:0;
+object-fit:cover;
+min-height:100%;
+min-width:100%;
+object-position:center}
+.blog__info.jsx-fad75cd775d05681 {padding:1.5rem 1.25rem;
+width:100%;
+max-width:768px;
+margin:0 auto}
+.blog__info.jsx-fad75cd775d05681 h1.jsx-fad75cd775d05681 {margin-bottom:0.66rem}
+.blog__info.jsx-fad75cd775d05681 h3.jsx-fad75cd775d05681 {margin-bottom:0}
+.blog__body.jsx-fad75cd775d05681 {width:100%;
+padding:0 1.25rem;
+margin:0 auto;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-flex-direction:column;
+-ms-flex-direction:column;
+flex-direction:column;
+-webkit-justify-content:center;
+justify-content:center}
+.blog__body.jsx-fad75cd775d05681 a.jsx-fad75cd775d05681 {padding-bottom:1.5rem}
+.blog__body.jsx-fad75cd775d05681:last-child {margin-bottom:0}
+.blog__body.jsx-fad75cd775d05681 h1.jsx-fad75cd775d05681 h2.jsx-fad75cd775d05681 h3.jsx-fad75cd775d05681 h4.jsx-fad75cd775d05681 h5.jsx-fad75cd775d05681 h6.jsx-fad75cd775d05681 p.jsx-fad75cd775d05681 {font-weight:normal}
+.blog__body.jsx-fad75cd775d05681 p.jsx-fad75cd775d05681 {color:#ffffff}
+.blog__body.jsx-fad75cd775d05681 ul.jsx-fad75cd775d05681 {list-style:initial}
+.blog__body.jsx-fad75cd775d05681 ul.jsx-fad75cd775d05681 ol.jsx-fad75cd775d05681 {margin-left:1.25rem;
+margin-bottom:1.25rem;
+padding-left:1.45rem}
+.blog__footer.jsx-fad75cd775d05681 {display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-box-pack:justify;
+-webkit-justify-content:space-between;
+justify-content:space-between;
+-webkit-align-items:center;
+-webkit-box-align:center;
+-ms-flex-align:center;
+align-items:center;
+padding:1.5rem 1.25rem;
+width:100%;
+max-width:800px;
+margin:0 auto}
+.blog__footer.jsx-fad75cd775d05681 h2.jsx-fad75cd775d05681 {margin-bottom:0}
+.blog__footer.jsx-fad75cd775d05681 a.jsx-fad75cd775d05681 {display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-box-pack:justify;
+-webkit-justify-content:space-between;
+justify-content:space-between;
+-webkit-align-items:center;
+-webkit-box-align:center;
+-ms-flex-align:center;
+align-items:center}
+.blog__footer.jsx-fad75cd775d05681 a.jsx-fad75cd775d05681 svg.jsx-fad75cd775d05681 {width:20px}
+@media (min-width:768px) {.blog.jsx-fad75cd775d05681 {display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-flex-direction:column;
+-ms-flex-direction:column;
+flex-direction:column}
+.blog__body.jsx-fad75cd775d05681 {max-width:800px;
+padding:0 2rem}
+.blog__body.jsx-fad75cd775d05681 span.jsx-fad75cd775d05681 {width:100%;
+margin:1.5rem auto}
+.blog__body.jsx-fad75cd775d05681 ul.jsx-fad75cd775d05681 ol.jsx-fad75cd775d05681 {margin-left:1.5rem;
+margin-bottom:1.5rem}
+.blog__hero.jsx-fad75cd775d05681 {min-height:600px;
+height:75vh}
+.blog__info.jsx-fad75cd775d05681 {text-align:center;
+padding:2rem 0}
+.blog__info.jsx-fad75cd775d05681 h1.jsx-fad75cd775d05681 {max-width:500px;
+margin:0 auto 0.66rem auto}
+.blog__footer.jsx-fad75cd775d05681 {padding:2.25rem}}
+@media (min-width:1440px) {.blog__hero.jsx-fad75cd775d05681 {height:70vh}
+.blog__info.jsx-fad75cd775d05681 {padding:3rem 0}
+.blog__footer.jsx-fad75cd775d05681 {padding:2rem 2rem 3rem 2rem}}</style><style id="__jsx-906dc5424778ca56">.layout.jsx-906dc5424778ca56 {overflow-x:hidden;
+display:-webkit-box;
+display:-webkit-flex;
+display:-ms-flexbox;
+display:flex;
+-webkit-flex-direction:column;
+-ms-flex-direction:column;
+flex-direction:column;
+min-height:100vh}
+.layout.jsx-906dc5424778ca56 .info_page.jsx-906dc5424778ca56 {color:#ebebeb}
+.content.jsx-906dc5424778ca56 {-webkit-box-flex:1;
+-webkit-flex-grow:1;
+-ms-flex-positive:1;
+flex-grow:1}
+@media (min-width:768px) {.layout.jsx-906dc5424778ca56 {display:block}
+.content.jsx-906dc5424778ca56 {-webkit-box-flex:none;
+-webkit-flex-grow:none;
+-ms-flex-positive:none;
+flex-grow:none;
+width:100vw;
+margin-left:0vw}}</style></head><body><div id="__next"><section style="background-color:undefined;color:false" class="jsx-906dc5424778ca56 layout false"><nav class="NavBar_navbar__D1PWG"><ul class="NavBar_list__ZV9KR"><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#home">Home</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="/ERC-website-2021/blog">Blog</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#events">Events</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#ercteamdet">Team Details</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#contact">Contact Us</a></li></ul></nav><div class="NavBar_navbar_mobile__9duUE"><div class="NavBar_hamburger_icon_block__a5VwY"><button href="/" class="NavBar_hamburger_icon_button__3TwpQ">☰</button></div><nav class="NavBar_nav_menu___omdq"><ul class="NavBar_nav_menu_items__gPV7x"><li class="NavBar_buttons_view__Rf_gB"><a href="/ERC-website-2021/blog/controls-theory#">Close ×</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#home">Home</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="/ERC-website-2021/blog">Blog</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#events">Events</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#ercteamdet">Team Details</a></li><li class="NavBar_buttons_view__Rf_gB"><a href="https://erciitb.github.io/website-2020/#contact">Contact Us</a></li></ul></nav></div><div class="jsx-906dc5424778ca56 content"><article class="jsx-fad75cd775d05681 blog"><figure class="jsx-fad75cd775d05681 blog__hero"><img src="/ERC-website-2021/static/controls_theory_cover.jpg" alt="blog_hero_Controls Theory" class="jsx-fad75cd775d05681"/></figure><div class="jsx-fad75cd775d05681 blog__info"><h1 class="jsx-fad75cd775d05681">Controls Theory</h1><h3 class="jsx-fad75cd775d05681">Nov 25 2021</h3></div><div class="jsx-fad75cd775d05681 blog__body"><p>Control theory is a branch of mathematics and engineering, which defines the conditions needed for a system to maintain a controlled output in the face of input variation. In simple terms, we seek to stabilize our system through some control theory concepts when many factors can destabilize it. At the end of reading this article, you can expect to have an overview of control theory with some basic knowledge of PID control.</p><p>To understand this, first, let us know a few terms:</p><p>1<!-- -->.<!-- --> <strong>Input:</strong> The set of instructions given to the system</p><p>2<!-- -->.<!-- --> <strong>Output:</strong> Consists of a group of variables that describe the state of the system. Usually represented by 𝑥</p><p>3<!-- -->.<!-- --> <strong>Control System:</strong> The entire system, which includes a <em>controller</em>, <em>plant</em>, and <em>sensors</em>, is collectively known as a control system. The <em>plant</em> is a part that is controlled. The <em>controller</em> provides control commands to the plant. <em>Sensors</em> measure the state of the system. See the flow diagram for reference:</p><p><img src="/ERC-website-2021/static/image9.png"/></p><p>To put these terms into an application, let’s take the example of a person driving a car. (Pause here and try to identify what could be the input, output, and control system in this example.) So, in this case, the <em>input</em> could be instructions given to the driver by his brain. The driver will be the <em>controller</em>, which controls the car using the instructions received. The vehicle will be the <em>plant</em>; sensors would be the speedometer, driver’s eyes to see the traffic, ears to listen to any horn, etc. The <em>output</em> could be the velocity of the car, current traffic conditions on the road, etc.</p><p>Now that you understand basic terms let&#x27;s move on to classifying control systems.</p><p>We classify control systems on various bases, but the most prominent ones are:</p><h2>1. Based on feedback (output)</h2><ul><li><strong>Open-loop control system</strong> - In this type of system, the input given to the controller is independent of the output. In the above car example, we can see that if the driver doesn’t pay heed to the current state of the system(the output) and drives it just based on some pre-learned instructions, then this system would be an open loop, as there are no changes made to the input depending on the output. As you must have noticed, this type of system is problematic as it cannot account for any uncertainties.</li><li><strong>Closed-loop control system</strong> - Here, the input commands are based on the output received. For example, when a car stops in front, the driver’s input will change, and they will apply brakes.</li></ul><h2>2. Based on energy expenditure</h2><ul><li><strong>Active</strong> - In this type, a certain amount of energy is required to implement the control commands. For example, to accelerate the car, it will consume fuel.</li><li><strong>Passive</strong> - This system involves minimal energy expenditure to implement the input into the system. For example, if the car goes downhill, it can be controlled by just applying the brakes.</li></ul><p>Since we now have an overview of control theory, let us bring some maths into the picture, let the input function be <em>u(t)</em> and output function be <em>x(t)</em>.</p><p>Wondering what use maths is of? Read on...</p><h1>Control Law</h1><p>Various types of systems have different anomalies present in them. In many cases, we can express the output and correction to the input to control the system through some mathematical relation. This relation is known as a <em>control law</em>. So, a <em>control law</em> is a mathematical law that relates output and input, along with other control command parameters or measurable properties of the state.</p><p>Example:   		u(t) = -K(x(t) - x0)</p><p>There are various control laws, such as <em>Linear Quadratic Regulator</em> (the above example is an LQR), <em>PID control</em>, etc., which may be helpful in different scenarios. One such law is PID which is widely used even in industries because it is simple and works for almost every case.</p><h1>Proportional-Integral-Derivative (PID)</h1><p>The control law for PID is:</p><p><img src="/ERC-website-2021/static/image5.png"/></p><p>Don’t get overwhelmed with the equation! It’s pretty simple when you understand it.</p><p>Let us understand what each term is:</p><p>1<!-- -->.<!-- --> <strong>Kp</strong> is the proportional coefficient/weight</p><p>2<!-- -->.<!-- --> <strong>Kd</strong> is the derivative coefficient/weight</p><p>3<!-- -->.<!-- --> <strong>Ki</strong> is the integral coefficient/weight</p><p>4<!-- -->.<!-- --> <strong>Ti</strong> is the integral time constant</p><p>5<!-- -->.<!-- --> <strong>Td</strong> is the derivative time constant</p><p>Here, <em>e(t)</em> is the error between the desired and the actual state.</p><p>This law has three parts: <strong>proportional</strong>, <strong>integral</strong> and <strong>derivative</strong> parts; each one of them has its own importance.</p><p><strong>Proportional(P)</strong></p><p>In this the input is linearly proportional to the error, which means that the error is just scaled using the constant <strong>Kp</strong>.</p><p><strong>Integral(I)</strong></p><p>The integral of error over time is scaled with a constant <strong>Ki</strong>.</p><p><strong>Derivative(D)</strong></p><p>Here, the derivative of the error is scaled and multiplied by the constant <strong>Kd</strong>.</p><p>Each of the above components aims to correct different causes of the error, and together these three combine to give us the best desired output.</p><p>Let’s understand the use of all the above three components using an example of a self-driving car. We have to design the controls of the vehicle. The car is supposed to move on a given marked line. Let&#x27;s start with our analysis:</p><p>The input given to the car is to turn its steering wheel to left or right by a fixed angle, as shown below.</p><p><img src="/ERC-website-2021/static/image8.png"/></p><p>But there is a problem with this; we are instructing to turn the steering wheel by the same angle even if the car is slightly offset. This will make the vehicle constantly oscillate around the line, and the ride will be jerky, making it uncomfortable for the passengers.</p><p><img src="/ERC-website-2021/static/image3.png"/></p><p>So what can be done to solve this? We need to turn the steering wheel in proportion to the error, i.e., its offset from the line. This is where the P part comes into play. Notice what will happen if we give the input as: <em>u(t) = Kp e(t)</em></p><p><img src="/ERC-website-2021/static/image2.png"/></p><p>Here we turn the steering by a smaller angle if the error is small and the problem is solved. But there is a problem with this too! This control works well with low offset, but it may lead to a situation like below when the error is high.</p><p><img src="/ERC-website-2021/static/image7.png"/></p><p>Since the initial angle is high, the steering angle is relatively high, but as a result, it leads to the car closing in on the line much quicker, even quicker than what the car can account for by decreasing the angle; hence it will overshoot. And again, the same story will repeat from the other side, leading to oscillations.</p><p>So how do we solve this? Here’s where the D part comes in handy. The input is modified as:  <em>u(t) = Kp e(t)  +  Kd e&#x27;(t)</em></p><p>The added term takes into account the rate of change of error. So if the error is decreasing rapidly, <em>e&#x27;(t)</em> will be highly negative. So when the error is enormous, the proportional part will be high, but as the car starts to steer, the derivative term will increase in the negative direction, avoiding the car to turn too quickly. So we will get an ideal situation as below:</p><p><img src="/ERC-website-2021/static/image4.png"/></p><p>This is collectively known as <strong>PD control</strong>.</p><p>Wait! There is still a problem. Only P and D can lead to an error known as steady-state error. Take the following case: Let&#x27;s say the car is driving at a small constant error parallel to the marked line (purple).</p><p><img src="/ERC-website-2021/static/image1.png"/></p><p>How will the P and D act in this case? Since the error is small, the proportional part will steer through a slight angle, but as soon as it starts turning, <em>e&#x27;(t)</em> will become negative and nullify the P term; hence the car will continue with a constant error (steady-state error).</p><p>The I part helps to account for this error. The input function now becomes:</p><p><code>u(t) = Kp e(t) + Kd e&#x27;(t) + Ki ∫e(t).dt</code></p><p>Integral term adds the net error till the current time and tries to make it zero.</p><p>So here, the integral part will add up the steady-state error and slowly reduce the error.</p><p><img src="/ERC-website-2021/static/image6.png"/></p><p>As we can see from the above image, the initial small steady-state error is quickly reduced to zero using the <em>Integral</em> term.</p><p>This completes our analysis of the <strong>PID</strong> control law. Note that the constants Kp, Kd  &amp; Ki are tuned ample times to get the perfect combination of the three, such that none of them overshadows the other terms, and we get our desired output.</p><p>So we come to an end of this short introduction to Control Theory. It is a math-heavy topic, and this was quite a superficial picture. For those interested to learn further and reading more about Control theory, you may go through the Controls Theory Bootcamp conducted by ERC. It involves a mathematical approach which is needed for a deeper understanding of the topic. The link for it is <a title="here" href="https://github.com/erciitb/tss-controls-theory">here</a>.</p></div><h2 class="jsx-fad75cd775d05681 blog__footer">Written By: <!-- -->Pranav Malpure</h2></article></div><div class="contact-section" id="contact"><div class="contact-details"><p id="contact-text" class="hover-difference">Get directly in touch with us:</p><div class="contact-icons hover-difference"><a href="https://www.facebook.com/erciitb"><i class="fab fa-facebook-square"></i></a><a href="https://www.instagram.com/erc.iitb/"><i class="fab fa-instagram"></i></a><a href="mailto:erciitbombay@gmail.com"><i class="far fa-envelope"></i></a></div><a href="mailto:elecrobo.club@iitb.ac.in" id="contact-mail" class="hover-difference">elecrobo.club@iitb.ac.in</a><button class="contact-form-button">Message us</button></div><div class="contact-form-map-mix-outer"><div class="contact-form-map-mix-inner"><div class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3169.6786880670256!2d72.9138437580561!3d19.13376545835707!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7f5e4ac7efd%3A0xd9d02f29b4617fb4!2sTinkerers&#x27;%20Laboratory!5e0!3m2!1sen!2sin!4v1597995010048!5m2!1sen!2sin" frameBorder="0" style="border:0" aria-hidden="false" tabindex="0"></iframe></div><div class="contact-form"><form action="./form-submit.php" method="POST" id="validated-form"><div class="contact-form-element"><label for="name">Name</label><input type="text" name="name" id="contact-user-name" required=""/></div><div class="contact-form-element"><label for="email">Email</label><input type="text" name="email" id="contact-user-email" required=""/></div><div class="contact-form-element"><label for="message">Message</label><textarea name="message" maxlength="10000" cols="30" rows="4" id="contact-user-message"></textarea></div></form></div></div></div></div></section></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"siteTitle":"ERC: Controls Theory","frontmatter":{"title":"Controls Theory","author":"Pranav Malpure","hero_image":"/ERC-website-2021/static/controls_theory_cover.jpg","date":"2021-11-25T13:50:00.000Z"},"markdownBody":"Control theory is a branch of mathematics and engineering, which defines the conditions needed for a system to maintain a controlled output in the face of input variation. In simple terms, we seek to stabilize our system through some control theory concepts when many factors can destabilize it. At the end of reading this article, you can expect to have an overview of control theory with some basic knowledge of PID control.\n\nTo understand this, first, let us know a few terms:\n\n1\\. **Input:** The set of instructions given to the system\n\n2\\. **Output:** Consists of a group of variables that describe the state of the system. Usually represented by 𝑥\n\n3\\. **Control System:** The entire system, which includes a _controller_, _plant_, and _sensors_, is collectively known as a control system. The _plant_ is a part that is controlled. The _controller_ provides control commands to the plant. _Sensors_ measure the state of the system. See the flow diagram for reference:\n\n![](/ERC-website-2021/static/image9.png)\n\nTo put these terms into an application, let’s take the example of a person driving a car. (Pause here and try to identify what could be the input, output, and control system in this example.) So, in this case, the _input_ could be instructions given to the driver by his brain. The driver will be the _controller_, which controls the car using the instructions received. The vehicle will be the _plant_; sensors would be the speedometer, driver’s eyes to see the traffic, ears to listen to any horn, etc. The _output_ could be the velocity of the car, current traffic conditions on the road, etc.\n\nNow that you understand basic terms let's move on to classifying control systems.\n\nWe classify control systems on various bases, but the most prominent ones are:\n\n## 1. Based on feedback (output)\n\n* **Open-loop control system** - In this type of system, the input given to the controller is independent of the output. In the above car example, we can see that if the driver doesn’t pay heed to the current state of the system(the output) and drives it just based on some pre-learned instructions, then this system would be an open loop, as there are no changes made to the input depending on the output. As you must have noticed, this type of system is problematic as it cannot account for any uncertainties.\n* **Closed-loop control system** - Here, the input commands are based on the output received. For example, when a car stops in front, the driver’s input will change, and they will apply brakes.\n\n## 2. Based on energy expenditure\n\n* **Active** - In this type, a certain amount of energy is required to implement the control commands. For example, to accelerate the car, it will consume fuel.\n* **Passive** - This system involves minimal energy expenditure to implement the input into the system. For example, if the car goes downhill, it can be controlled by just applying the brakes.\n\nSince we now have an overview of control theory, let us bring some maths into the picture, let the input function be _u(t)_ and output function be _x(t)_.\n\nWondering what use maths is of? Read on...\n\n# Control Law\n\nVarious types of systems have different anomalies present in them. In many cases, we can express the output and correction to the input to control the system through some mathematical relation. This relation is known as a _control law_. So, a _control law_ is a mathematical law that relates output and input, along with other control command parameters or measurable properties of the state.\n\nExample:   \t\tu(t) = -K(x(t) - x0)\n\nThere are various control laws, such as _Linear Quadratic Regulator_ (the above example is an LQR), _PID control_, etc., which may be helpful in different scenarios. One such law is PID which is widely used even in industries because it is simple and works for almost every case.\n\n# Proportional-Integral-Derivative (PID)\n\nThe control law for PID is:\n\n![](/ERC-website-2021/static/image5.png)\n\nDon’t get overwhelmed with the equation! It’s pretty simple when you understand it.\n\nLet us understand what each term is:\n\n1\\. **Kp** is the proportional coefficient/weight\n\n2\\. **Kd** is the derivative coefficient/weight\n\n3\\. **Ki** is the integral coefficient/weight\n\n4\\. **Ti** is the integral time constant\n\n5\\. **Td** is the derivative time constant\n\nHere, _e(t)_ is the error between the desired and the actual state.\n\nThis law has three parts: **proportional**, **integral** and **derivative** parts; each one of them has its own importance.\n\n**Proportional(P)**\n\nIn this the input is linearly proportional to the error, which means that the error is just scaled using the constant **Kp**.\n\n**Integral(I)**\n\nThe integral of error over time is scaled with a constant **Ki**.\n\n**Derivative(D)**\n\nHere, the derivative of the error is scaled and multiplied by the constant **Kd**.\n\nEach of the above components aims to correct different causes of the error, and together these three combine to give us the best desired output.\n\nLet’s understand the use of all the above three components using an example of a self-driving car. We have to design the controls of the vehicle. The car is supposed to move on a given marked line. Let's start with our analysis:\n\nThe input given to the car is to turn its steering wheel to left or right by a fixed angle, as shown below.\n\n![](/ERC-website-2021/static/image8.png)\n\nBut there is a problem with this; we are instructing to turn the steering wheel by the same angle even if the car is slightly offset. This will make the vehicle constantly oscillate around the line, and the ride will be jerky, making it uncomfortable for the passengers.\n\n![](/ERC-website-2021/static/image3.png)\n\nSo what can be done to solve this? We need to turn the steering wheel in proportion to the error, i.e., its offset from the line. This is where the P part comes into play. Notice what will happen if we give the input as: _u(t) = Kp e(t)_\n\n![](/ERC-website-2021/static/image2.png)\n\nHere we turn the steering by a smaller angle if the error is small and the problem is solved. But there is a problem with this too! This control works well with low offset, but it may lead to a situation like below when the error is high.\n\n![](/ERC-website-2021/static/image7.png)\n\nSince the initial angle is high, the steering angle is relatively high, but as a result, it leads to the car closing in on the line much quicker, even quicker than what the car can account for by decreasing the angle; hence it will overshoot. And again, the same story will repeat from the other side, leading to oscillations.\n\nSo how do we solve this? Here’s where the D part comes in handy. The input is modified as:  _u(t) = Kp e(t)  +  Kd e'(t)_\n\nThe added term takes into account the rate of change of error. So if the error is decreasing rapidly, _e'(t)_ will be highly negative. So when the error is enormous, the proportional part will be high, but as the car starts to steer, the derivative term will increase in the negative direction, avoiding the car to turn too quickly. So we will get an ideal situation as below:\n\n![](/ERC-website-2021/static/image4.png)\n\nThis is collectively known as **PD control**.\n\nWait! There is still a problem. Only P and D can lead to an error known as steady-state error. Take the following case: Let's say the car is driving at a small constant error parallel to the marked line (purple).\n\n![](/ERC-website-2021/static/image1.png)\n\nHow will the P and D act in this case? Since the error is small, the proportional part will steer through a slight angle, but as soon as it starts turning, _e'(t)_ will become negative and nullify the P term; hence the car will continue with a constant error (steady-state error).\n\nThe I part helps to account for this error. The input function now becomes:\n\n`u(t) = Kp e(t) + Kd e'(t) + Ki ∫e(t).dt`\n\nIntegral term adds the net error till the current time and tries to make it zero.\n\nSo here, the integral part will add up the steady-state error and slowly reduce the error.\n\n![](/ERC-website-2021/static/image6.png)\n\nAs we can see from the above image, the initial small steady-state error is quickly reduced to zero using the _Integral_ term.\n\nThis completes our analysis of the **PID** control law. Note that the constants Kp, Kd  \u0026 Ki are tuned ample times to get the perfect combination of the three, such that none of them overshadows the other terms, and we get our desired output.\n\nSo we come to an end of this short introduction to Control Theory. It is a math-heavy topic, and this was quite a superficial picture. For those interested to learn further and reading more about Control theory, you may go through the Controls Theory Bootcamp conducted by ERC. It involves a mathematical approach which is needed for a deeper understanding of the topic. The link for it is [here](https://github.com/erciitb/tss-controls-theory \"here\")."},"__N_SSG":true},"page":"/blog/[slug]","query":{"slug":"controls-theory"},"buildId":"5QJC4znxUt28OyN5o0qMk","assetPrefix":"/ERC-website-2021","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
